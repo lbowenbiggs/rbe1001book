@@ -28,11 +28,11 @@ body {
 .vocabColor
 {
 color:red;
-font-style: italic;
+font-style:italic;
 }
 
 .captionStyle
 {
-color:Blue
-font-size:75%
+color:green;
+font-size:75%;
 }
