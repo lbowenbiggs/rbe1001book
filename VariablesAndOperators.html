@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<!--
+	Thanks for looking at our source code! This webpage was developed for the 
+	RBE 1001 E-Textbook IQP in 2014. For questions, contact rbebook@wpi.edu
+	-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RBE 1001 E-Book</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootrap Theme -->
+	<link href="css/boostrap-theme.min.css" rel="stylesheet">
+	<!-- CSS for this page -->
+	<link href="css/theme.css" rel="stylesheet">
+
+	<!-- This makes the header and footer appear. Don't edit it -->
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+	$(function() {
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	});
+	</script>
+
+</head>
+
+<body role="document">
+<div id="header"></div>
+
+<br/>
+<div class="container theme-showcase" role="main">
+<!-- CONTENT BEGIN -->
+<div class="jumbotron">
+	<div class="row">
+	<div class="col-md-8">
+		<h1>Programming</h1>
+		<p>Introduction to Programming in C and Arduino</p>
+	</div>
+	</div>
+	<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+return false;
+}
+//-->
+</SCRIPT>
+</div>
+<h3>Objectives</h3>
+<p>After this chapter you should be able to:</p>
+<UL>
+<LI>Identify When to Use Local, Global, and Static Variables</LI>
+<LI>Correctly Use Arithmetical and Relational Operators</LI>
+<LI>Identify When to Use If-Statements, While Loops, and For Loops</LI>
+<LI>Correctly Implement If-Statements, While Loops, and For Loops</LI>
+</UL>
+<h4> Note: All Pictures in This Section Can Be Enlarged By Clicking on Them</h4>
+<br>
+<h2>Constants and Variables</h2>
+<p>Constants are values in a program that cannot change throughout a program’s execution. When a constant is defined, a program essentially just sees the constant and pastes the defined value into the function instead. Constants can be initialized using pound-define (#define) and are usually declared in all capital letters. Variables are locations in memory for storing values and can change over time. All variables have a type (int, long, char, etc.) and a visibility: global or local. Further, variables in certain instances can be static.</p>
+
+      <A HREF="file:///C:/Users/Owner/Documents/GitHub/rbe1001book/Programming_Popups/Local&Global.html" 
+   onClick="return popup(this, 'Local and Global Variables')"><center><img src="Programming_Popups/Programming_Pictures/Local&Global.png"  HEIGHT="300px" /img></center></A>
+<br><br>
+
+<p> Type refers to what can be stored in a variable; different types can hold different values. For example, an int can hold two bytes (or values from -32,768 to 32,767) while a char can hold one byte (or values from 0-255). For this reason, ints are usually used for numbers while chars are usually used for alphanumeric symbols.</p>
+
+<p>Visibility refers to where or how the variable is declared; the two kinds of visibility are global and local. Global variables are declared at the top of a program and are accessible throughout the entire program and all related functions. Local variables are defined inside a certain function, state, or other small part of a program and are not accessible beyond the outer limits of whatever they are declared in. </p>
+<TABLE>
+   <TR>
+      <TD WIDTH=75% ALIGN=CENTER> 
+	  <p>Visibility refers to where or how the variable is declared; the two kinds of visibility are global and local. Global variables are declared at the top of a program and are accessible throughout the entire program and all related functions. Local variables are defined inside a certain function, state, or other small part of a program and are not accessible beyond the outer limits of whatever they are declared in. </p>
+	  <p>In the picture on the right, notice the line highlighted in yellow and the Arduino error message. This will occur if you try to access a local variable outside of where it is defined.</p></TD>
+      <TD WIDTH=25% ALIGN=CENTER><A HREF="file:///C:/Users/Owner/Documents/GitHub/rbe1001book/Programming_Popups/LocalNotDefined.html" 
+   onClick="return popup(this, 'Error - Local Variable Not Defined')"><img src="Programming_Pictures/LocalNotDefined.png" HEIGHT="300px" /img></A>
+   </TD>
+   </TR>
+</TABLE>
+<br>
+
+<p>Static variables do not change between invocations in the program in which they are used; they are similar to global variables in that way. Static variables can only be manipulated or used in the function in which they are declared, but they do not lose their value between multiple function calls. </p>
+<br><br>
+
+<TABLE>
+<TR>
+	<TD WIDTH=100% ALIGN=CENTER> <img src="Programming_Pictures/Static.png" HEIGHT="400px" /img> </TD>
+	<TD WIDTH=50% ALIGN=CENTER> <img src="Programming_Pictures/StaticOutput.png" HEIGHT="300x" /img> </TD>
+</TR>
+</TABLE>
+<br><br>
+
+<p>Finally, it is important to remember that variables are case sensitive. The common format for naming a variable is called “camel case” and consists of the first (or only) word in lower case and any additional words beginning with an uppercase letter. Variable names never have spaces; underscores are an acceptable alternative. </p>
+
+<h2>Operators</h2>
+
+<p>Operators are used in programs for the manipulation of data and variables. They are used for arithmetic, bit-wise operations, and comparisons. </p>
+
+<p>Arithmetical operators consist of adding (+), subtracting (-), multiplying (*), dividing (/), and modulo (%). Modulo gives the remainder after a division. For example, having an operation 5%3 would mean to divide 5 by 3 and output the remainder (2). Arithmetical operators can be combined as a sort of short-hand to make programs look cleaner: +=, -=, *=, /=. A short-hand operator can be used with two values where at least one is a variable: for example “a” and 5. The code would be written as “a += 5;” and it means “a” equals the sum of “a” and 5. Therefore, if “a” had been equal to 11 before that line, it would now be equal to 17. Each short-hand operator works much in this way. </p>
+<br><br>
+	 <A HREF="file:///C:/Users/Owner/Documents/GitHub/rbe1001book/Programming_Popups/Arithmetic.html" 
+   onClick="return popup(this, 'Arithmetical Operators')"><center><img src="Programming_Popups/Programming_Pictures/Arithmetic.png" HEIGHT="300px" /img></center></A>
+<br><br>
+<p>Relational operators consist mainly of less than (<), greater than (>), is equal to (==), and not (!). Relational operators “less than” and “greater than” can be combined with “equals” to achieve “less than or equal to” and “greater than or equal to.” “Not” can be combined with any of “less than,” “greater than,” and “equal to.” It is also important to note that when comparing two values to see if they are equal, a program must use two equal signs; using only one equals sign will simply reassign your variable rather than comparing it. </p>
+	 <A HREF="file:///C:/Users/Owner/Documents/GitHub/rbe1001book/Programming_Popups/Relational.html" 
+   onClick="return popup(this, 'Relational Operators')"><center><img src="Programming_Popups/Programming_Pictures/Relational.png" HEIGHT="300px" /img></center></A>
+<br><br>
+
+<h3>Operator Examples:</h3>
+
+
+<!-- CONTENT END -->
+</div>
+
+<div class="container"><hr></div>
+
+<div id="footer"></div>
+</body>
+</html>	
