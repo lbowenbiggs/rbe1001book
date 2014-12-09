@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<!--
+	Thanks for looking at our source code! This webpage was developed for the 
+	RBE 1001 E-Textbook IQP in 2014. For questions, contact rbebook@wpi.edu
+	-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RBE 1001 E-Book</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootrap Theme -->
+	<link href="css/boostrap-theme.min.css" rel="stylesheet">
+	<!-- CSS for this page -->
+	<link href="css/theme.css" rel="stylesheet">
+
+	<!-- This makes the header and footer appear. Don't edit it -->
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+	$(function() {
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	});
+	</script>
+
+</head>
+
+<body role="document">
+<div id="header"></div>
+
+<br/>
+<div class="container theme-showcase" role="main">
+<!-- CONTENT BEGIN -->
+<h3>Solution: Total Resistance is 434.5 Ohms</h3>
+<br><br>
+<TABLE>
+   <TR>
+      <TD WIDTH=75% ALIGN=CENTER> First, recognize the series and parallel resistors in this circuit. Start by reducing resistors A and B into an equivalent resistance:</TD>
+      <TD WIDTH=25% ALIGN=CENTER><img src="Circuit_Pictures/RAB.png"  HEIGHT="50px" /><br><br></TD>
+   </TR>
+    <TR>
+      <TD WIDTH=75% ALIGN=CENTER>Next, reduce the parallel resistors C and D:</TD>
+      <TD WIDTH=25% ALIGN=CENTER><img src="Circuit_Pictures/RCD.png"  HEIGHT="100px" /><br><br></TD>
+   </TR>
+   <TR>
+      <TD WIDTH=75% ALIGN=CENTER>Third, reduce series resistors E, F and G:</TD>
+      <TD WIDTH=25% ALIGN=CENTER><img src="Circuit_Pictures/REFG.png"  HEIGHT="50px" /><br><br></TD>
+   </TR> 	
+   <TR>
+      <TD WIDTH=75% ALIGN=CENTER>The new configuration would look like this:</TD>
+      <TD WIDTH=25% ALIGN=CENTER><img src="Circuit_Pictures/Simplified.png"  HEIGHT="150px" /><br><br></TD>
+   </TR> 
+   <TR>
+      <TD WIDTH=75% ALIGN=CENTER>Now, solve RCD and REFG which are in parallel:</TD>
+      <TD WIDTH=25% ALIGN=CENTER><img src="Circuit_Pictures/RCG.png"  HEIGHT="75px" /><br><br></TD>
+   </TR>
+   <TR>
+      <TD WIDTH=75% ALIGN=CENTER>Finally, solve the equation by adding the equivalent resistances since they are in series:</TD>
+      <TD WIDTH=25 ALIGN=CENTER><img src="Circuit_Pictures/RTotal.png"  HEIGHT="50px" /><br></TD>
+   </TR>
+</TABLE>
+
+<!-- CONTENT END -->
+</div>
+
+<div class="container"><hr></div>
+
+<div id="footer"></div>
+</body>
+</html>	
