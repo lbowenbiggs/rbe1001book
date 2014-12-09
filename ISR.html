@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	<!--
+	Thanks for looking at our source code! This webpage was developed for the 
+	RBE 1001 E-Textbook IQP in 2014. For questions, contact rbebook@wpi.edu
+	-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>RBE 1001 E-Book</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootrap Theme -->
+	<link href="css/boostrap-theme.min.css" rel="stylesheet">
+	<!-- CSS for this page -->
+	<link href="css/theme.css" rel="stylesheet">
+
+	<!-- This makes the header and footer appear. Don't edit it -->
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+	$(function() {
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	});
+	</script>
+
+</head>
+
+<body role="document">
+<div id="header"></div>
+
+<br/>
+<div class="container theme-showcase" role="main">
+<!-- CONTENT BEGIN -->
+<div class="jumbotron">
+	<div class="row">
+	<div class="col-md-8">
+		<h1>Sensors</h1>
+		<p>Sensing and Interrupt Service Routines</p>
+	</div>
+	</div>
+	<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+return false;
+}
+//-->
+</SCRIPT>
+</div>
+<h3>Objectives</h3>
+<p>After this chapter you should be able to:</p>
+<UL>
+<LI>Explain why sensors are important</LI>
+<LI>Identify different kinds of sensors and their applications</LI>
+<LI>Describe Interrupt Service Routines and when they are appropriate</LI>
+</UL>
+<br><br>
+<h2>Interrupt Service Routines</h2>
+<p>Interrupt Service Routines (ISRs) are used to help organize program flow and ensure that input from certain sensors are not overlooked. ISRs will stop all normal program flow when triggered and the program will run the routine or function before going back to what it was doing before. The alternative is to “poll” for results, which really means just continuously checking to see if the sensor has new data. </p>
+<p>For example, imagine you are sitting at home watching television and waiting for a phone call. A programmer trying to handle this would see that there are two solutions: polling and interrupts. The polling solution would be to watch TV, then check the phone to see if anyone is there, then watch TV again, then pick up the phone again and so on. The interrupt solution would be to watch TV while listening for the phone to ring; if it does, simply stop the show and answer the phone then resume the show after hanging up. </p>
+<p>Interrupts can get tricky or messy if there are multiple things you are waiting for in a program. Imagine that same example, but on top of watching TV and waiting for the phone you also have to attend to someone at the door, food cooking in the kitchen and checking your social media accounts on your computer. What if the doorbell rings at the same time as the timer in the kitchen beeps, the phone rings, and your best friend messages you on your laptop? Which one would you handle first? To help combat this, interrupts can be assigned a level of importance. That way if multiple are triggered at the same time, the one with the lowest importance (most important) would go first, followed by the next lowest and so on until there are no more interrupts left to handle. The program would then return back to whatever it was doing before all of the interrupts were triggered.</p>
+
+<!-- CONTENT END -->
+</div>
+
+<div class="container"><hr></div>
+
+<div id="footer"></div>
+</body>
+</html>	

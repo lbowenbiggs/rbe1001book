@@ -40,8 +40,8 @@
 <div class="jumbotron">
 	<div class="row">
 	<div class="col-md-8">
-		<h1>Programming</h1>
-		<p>Sensors</p>
+		<h1>Sensors</h1>
+		<p>Sensing and Interrupt Service Routines</p>
 	</div>
 	</div>
 	<SCRIPT TYPE="text/javascript">
@@ -60,7 +60,29 @@ return false;
 //-->
 </SCRIPT>
 </div>
+<h3>Objectives</h3>
+<p>After this chapter you should be able to:</p>
+<UL>
+<LI>Explain why sensors are important</LI>
+<LI>Identify different kinds of sensors and their applications</LI>
+<LI>Describe Interrupt Service Routines and when they are appropriate</LI>
+</UL>
 
+<h2>What are Sensors?</h2>
+<p>Sensors are electronic components used to help a system interact with or understand the environment that it is operating in. Sensors come in many different types, each with a different goal. Some sensors can tell a robot when it has come in contact with something; others tell how far away a target or object is. Certain sensors tell the state of different components in the system. Most sensors are managed by program logic and basic I/O. </p>
+<br>
+<h2>Types of Sensors</h2>
+<br>
+<h3>Mechanical</h3>
+<p>Mechanical sensors are used to tell when a robot, or subsystem on a robot, is in contact with something. The most common types of mechanical sensors are bump sensors and limit switches. Mechanical sensors can tell whether the system is at a singular, set distance. Mechanical sensors send a digital signal (1 or 0) to the input pins on a controller to indicate whether the sensor is depressed or not. </p>
+<br>
+<h3>Light</h3>
+<p>Light sensors, specifically IR sensors, are used to determine the distance, angle or timing of something. Infrared Sensors have an IR diode that produces light at the focal point of a lens; this produces parallel beams of light moving out of the lens into the surrounding environment. The sensor outputs a voltage that is related to the distance perceived by the sensor. The resultant curve is non-linear and as the object gets closer, the output voltage gets larger. In order to cover a larger area, consider using multiple IR sensors that are angled such that the fields of IR emitted cross each other. Alternatively, consider using a servo to create a sweeping motion and scan the entire area periodically. </p>
+<br>
+<h3>SONAR</h3>
+<p>SONAR sensors use sound waves in a way that mimics echolocation. SONAR sensors use a speaker and microphone to project sound into an environment and listen for it to return. SONAR sensors measure the time difference between the emission of the sound and when it comes back to determine distance. SONAR sensors can be used in both air and water. </p>
+
+<A HREF="file:///C:/Users/Owner/Documents/GitHub/rbe1001book/SensorsOrientation.html">To read about potentiometers, gyros, and encoders click here!</A>
 
 <!-- CONTENT END -->
 </div>
