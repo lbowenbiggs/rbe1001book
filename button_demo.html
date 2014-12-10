@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access a Radio Button</h3>
+
+Radio Button: <input type="radio" id="myRadio" onclick="myWrite()">
+
+<p>Click the "Try it" button to check the radio button.</p>
+
+<p id="result">See Result Here</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myRadio");
+    if (x.checked == true) {
+        x.checked = false;
+    } else {
+        x.checked = true;
+    }
+}
+
+function myWrite() {
+    document.getElementById("result").innerHTML = "Paragraph changed.";
+
+    var file = new File("button_demo.txt", "rw");
+    file.writeln("Hello!");
+    file.close();
+}
+</script>
+
+</body>
+</html>
+
