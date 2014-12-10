@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+    Thanks for looking at my source code! I use Bootstrap, a free and open source front-end. 
+    Poke around and if you see anything interesting, please shoot me an e-mail at pcbiggs@wpi.edu
+    -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>RBE E-Book</title>
+
+    <!-- Bootstrap Core CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href-"css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- CSS for this page -->
+    <link href="css/theme.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    $(function() {
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+    </script>
+
+</head>
+
+<body role="document">
+<div id="header"></div>
+  
+<div class="container theme-showcase" role="main">
+<!-- CONTENT -->
+<br/>
+<div class="row">
+<div class="col-md-9">
+<div class="jumbotron">
+    <div class="row">
+        <h1 id="title" class="page-header">Power Transmission</h1>
+        <p>This is a sample chapter of the Introduction to Robotics Engineering textbook, built for the 2014 RBE Book IQP.</p>
+        <p>For questions, email <a href="mailto:rbebook@wpi.edu">rbebook@wpi.edu</a></p>
+    </div>
+</div>
+
+<h1 id="what-is" class="page-header">What is a Power Transmission?</h1>
+<p>A power transmission is a way of manipulating the output of a motor to better suit the needs of the system. 
+A correctly-implemented transmission can result in an increase of speed or torque. 
+However, no transmission can increase the amount of power being output by the motor. 
+For this reason, any increase in speed will result in a decrease in torque and vice versa. 
+Alternatively, a transmission could also have no impact on the motor's output torque or speed; it may simply be used to transfer power from where the motor is mounted to where the power is needed.</p>
+<div class="well">
+Remember: Power is Work divided by Time
+</div>
+
+<h1 id="types" class="page-header">What are the Types of Power Transmissions?</h1>
+<p>The two main types of power transmissions used in mobile robots are gears and chains. 
+Gears come in many different varieties including spur gears, worm gears, differential gears, and more. 
+Each system has individual advantages and disadvantages as far as power input required or output given, space, weight, and functionality. 
+Chains are available in many sizes and strengths; this means they are easily adaptable to most designs.</p>
+
+<h2>Gears</h2>
+<p>Gears are the most common form of power transmissions. 
+The entire system of gears used to manipulate motor speed, torque or direction is called a <code>gear reduction</code>.  For every power transmission using gears, there is, at minimum, a driver gear and a driven gear. A driver gear is the gear that is directly connected to the motor that then “drives” or turns the rest of the system. Driver gears convert torque to force. The driven gear is connected, directly or indirectly, to the driver gear and outputs power to the mechanism. Driven gears convert force to torque. Any gears between a driver gear and a driven gear that have no effect on the total system are called idler gears.
+
+<h1>Concept Check Questions</h1>
+<h3>Geared Transmissions</h3>
+<p>Given a power transmission with a motor moving counter clockwise that connected to a 36-tooth gear, a 12-tooth gear, a 60-tooth gear, and finally a 36-tooth gear</p>
+<!-- IMAGE HERE -->
+<form>
+	<label for="ratio">What is the gear ratio of the system?</label>
+	<br/><input id="ratio" name="gear_ratio" pattern="1|1:1|1/1">
+
+	<br/>
+	<label for="direction">What direction is the final driven gear moving?</label>
+	<br/><input type="radio" id="direction" value="clockwise"> Clockwise
+	<br/><input type="radio" id="direction" value="counterclockwise"> Counterclockwise
+</form>
+</div>
+
+<div class="col-md-3">
+    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
+        <ul class="nav bs-docs-sidenav">
+            <li class>
+                <a href="#title">Top</a>
+            </li>
+            <li>
+                <a href="#what-is">What is a Power Transmission?</a>
+            </li>
+            <li>
+                <a href="#types">What are the Types of Power Transmissions?</a>
+                <ul class="nav">
+                    <li>
+                        <a href="#gears">Gears</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+<!-- END CONTENT -->
+</div>
+
+<div class="container"><hr></div>
+
+<div id="footer"></div>
+</body>
+</html>
