@@ -147,8 +147,10 @@ return false;
 <h3> If-Statements</h3>
 <h4>Syntax</h4>
 
-<A HREF="Programming_Popups/IfStatement.html" 
-   onClick="return popup(this, 'If-Statement Syntax')"><img src="Programming_Popups/Programming_Pictures/If.png" HEIGHT="75px" /img></A>
+<span class="arduinoText"> if</span> <span class="codeText">(argument) {</span> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something</span>
+<br>
+<span class="codeText">}</span>
 
    <br>
 <h4>What Are They?</h4>
@@ -163,11 +165,21 @@ return false;
    <center><p> What will this code print? Click on it for the answer</p></center>
 <br>
 <p>When a function or program needs to check more than one condition, an else-if can be implemented.</p>
-<<<<<<< HEAD
-<center><A HREF="Programming_Popups/IfStatement.html" 
-   onClick="return popup(this, 'If-Statement Syntax')"><img src="Programming_Popups/Programming_Pictures/elseIf.png" HEIGHT="200px" /img></A></center>
 
-   <center><span class="captionStyle">If Statement Using "else if" in Arduino</span></center>
+<span class="arduinoText">
+if</span> <span class="codeText"> (argument) { </span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something</span> <br>
+<span class="codeText">} </span><br>
+<br>
+<span class="arduinoText">else if</span> <span class="codeText"> (secondArgument) { </span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something else</span> <br>
+<span class="codeText">} </span><br>
+<br>
+<span class="arduinoText">else</span> <span class="codeText">{</span> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something different</span><br>
+<span class="codeText">}</span> <br>
+</span>
+
 <p>Finally, sometimes there is a need to use an if-statement inside an if-statement. These are effective but not efficient. State machines are the cleaner way to accomplish the same goal. Find more information on state machines <A HREF="users.wpi.edu/~RBE1001book/StateMachines">here</A></p>
 
 <h2>Loops</h2>
@@ -176,15 +188,18 @@ return false;
 
 <h3>While-Loops</h3>
 <h4>Syntax:</h4>
-
-<A HREF="Programming_Popups/LoopSyntax.html" 
-   onClick="return popup(this, 'Loop Syntax')"><img src="Programming_Popups/Programming_Pictures/While.png" HEIGHT="150px" /img></A>
-
+<br>
+<span class="arduinoText">while</span> <span class="codeText">(condition) { </span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something </span><br>
+<span class="codeText">} </span><br>
+<span class="commentText">//more code to be run while condition is false
+</span>
+<br>
    
 <h4>What Are They?</h4>
 <p>While-loops are a type of loop that continues as long as a Boolean statement is true. The program runs through the loop checking the condition before running through each time. When the condition is found to be false, the loop “breaks” or stops repeating those statements and moves on to the next statement or function in the program. </p>
 <h4>Example</h4>
-<<<<<<< HEAD
+
 <A HREF="Programming_Popups/WhileExample.html" 
    onClick="return popup(this, 'While-Loop Example')"><center><img src="Programming_Popups/Programming_Pictures/WhileExample.png" HEIGHT="400px" /img></center></A>
 
@@ -194,9 +209,12 @@ return false;
 <br>
 <h3>For-Loops</h3>
 <h4>Syntax:</h4>
+<br>
+<span class="arduinoText"> for </span> <span class="codeText"> (Initial Counter Value, Counter Limit, Counter Instruction) { </span><br>
+<span class="commentText">//do something</span><br>
+<span class="codeText"> } </span>
+<br>
 
-<A HREF="Programming_Popups/LoopSyntax.html" 
-   onClick="return popup(this, 'Loop Syntax')"><img src="Programming_Popups/Programming_Pictures/ForSyntax.png" HEIGHT="75px" /img></A>
 <h4>What Are They?</h4>
 <p>For-loops are loops that run a specified number of times before moving on to the next part of the code. For-loops have an index variable that simply keeps track of how many times the loop has run and either increments or decrements at the beginning of the loop. After adjusting the index variable, the loop then checks a conditional statement that compares the index to some pre-defined value; as long as the statement is true, the loop will run.</p>
 <h4>Example</h4>
@@ -208,17 +226,15 @@ return false;
 
 <h3>Break and Continue</h3>
 <p>Break is a tool that can stop a loop at any point, usually given a certain condition. When break is triggered, the program will move to the first lines below the loop and execute them. For example:</p>
-<<<<<<< HEAD
-<A HREF="Programming_Popups/BreakAndContinue.html" 
-   onClick="return popup(this, 'Break')"><center><img src="Programming_Popups/Programming_Pictures/break.png" HEIGHT="25px" /img></center></A>
-   <br>
+
+	<center><span class="arduinoText"> break; </span></center>
+	<br>
    <A HREF="Programming_Popups/BreakAndContinue.html" 
    onClick="return popup(this, 'Break')"><center><img src="Programming_Popups/Programming_Pictures/BreakExample.png" HEIGHT="400px" /img></center></A>
    <center><span class="captionStyle">Using Break with Arduino</span></center>
    <br><br>
 <p>Continue is a tool that can alter the progression of a loop given a certain condition. When a loop has a continue condition and the condition is met, the program will skip over all the rest of the code in that loop and jump back to the top of the loop. The loop will then run again from the top. For example:</p>
-<A HREF="Programming_Popups/BreakAndContinue.html" 
-   onClick="return popup(this, 'Continue')"><center><img src="Programming_Popups/Programming_Pictures/ContinueSyntax.png" HEIGHT="25px" /img></center></A>
+	<center><span class="arduinoText"> continue; </span></center>
    <br>
    <A HREF="Programming_Popups/BreakAndContinue.html" 
    onClick="return popup(this, 'Continue')"><center><img src="Programming_Popups/Programming_Pictures/Continue.png" HEIGHT="400px" /img></center></A>
