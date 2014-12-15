@@ -27,12 +27,31 @@ body {
 
 .vocabColor
 {
-color:red;
-font-style:italic;
+	color:red;
+	font-style:italic;
 }
 
 .captionStyle
 {
-color:green;
-font-size:75%;
+	color:green;
+	font-size:75%;
+}
+
+
+.codeText
+{
+	font-family:"Lucida Console";
+	color:black;
+}
+
+.arduinoText
+{
+	font-family:"Lucida Console";
+	color:orange;
+}
+
+.commentText
+{
+	font-family:"Lucida Console";
+	color:gray;
 }
