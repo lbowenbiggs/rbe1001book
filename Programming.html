@@ -78,96 +78,135 @@ return false;
 <LI>Correctly Implement If-Statements, While Loops, and For Loops</LI>
 </UL>
 <br>
-<h4> Note: All Pictures in This Section Can Be Enlarged By Clicking on Them</h4>
+<h4>All Pictures in This Section Can Be Enlarged By Clicking on Them</h4>
+<h4>All Vocab is Listed at the End of This Section</h4>
 <br>
-<h2>Constants and Variables</h2>
-<p>Constants are values in a program that cannot change throughout a program’s execution. When a constant is defined, a program essentially just sees the constant and pastes the defined value into the function instead. Constants can be initialized using pound-define (#define) and are usually declared in all capital letters. Variables are locations in memory for storing values and can change over time. All variables have a type (int, long, char, etc.) and a visibility: global or local. Further, variables in certain instances can be static.</p>
 
+<h2>Constants and Variables</h2>
+
+<div class="row">
+<div class="col-md-7">
+<br><br>
+<p>Constants are values in a program that cannot change throughout a program’s execution. When a constant is defined, a program essentially just sees the constant and pastes the defined value into the function instead. Constants can be initialized using pound-define (#define) and are usually declared in all capital letters. <span class="vocabColor">Variables</span> are locations in memory for storing values and can change over time. All variables have a type (int, long, char, etc.) and a visibility: global or local. Further, variables in certain instances can be static.</p>
+</div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
       <A HREF="Programming_Popups/Local&Global.html" 
    onClick="return popup(this, 'Local and Global Variables')"><center><img src="Programming_Popups/Programming_Pictures/Local&Global.PNG"  HEIGHT="400px" /img></center></A>
+   <br>
+    <center><span class="captionStyle">Local and Global Variables</span></center>
+</div>
+</div>
 
-   <center><span class="captionStyle">Local and Global Variables</span></center>
 <br><br>
 
-<p> Type refers to what can be stored in a variable; different types can hold different values. For example, an int can hold two bytes (or values from -32,768 to 32,767) while a char can hold one byte (or values from 0-255). For this reason, ints are usually used for numbers while chars are usually used for alphanumeric symbols.</p>
+<div class="row">
+<div class="col-md-7">
+<br><br>
+<p> Type refers to what can be stored in a variable; different types can hold different values. For example, an <span class="vocabColor">int</span>, or integer, can hold two bytes (or values from -32,768 to 32,767) while a <span class="vocabColor">char</span>, or character, can hold one byte (or values from 0-255). For this reason, ints are usually used for numbers while chars are usually used for alphanumeric symbols.</p>
+</div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4"> <A HREF="Programming_Popups/DataTypes.html" 
+   onClick="return popup(this, 'Data Types')"><center><img src="Programming_Popups/Programming_Pictures/DataTypes.PNG"  HEIGHT="200px" /img></center></A>
+   <center><span class="captionStyle">Data Types and Sizes</span></center>
+</div>
+</div>
 
-<p>Visibility refers to where or how the variable is declared; the two kinds of visibility are global and local. Global variables are declared at the top of a program and are accessible throughout the entire program and all related functions. Local variables are defined inside a certain function, state, or other small part of a program and are not accessible beyond the outer limits of whatever they are declared in. </p>
-<TABLE>
-   <TR>
-      <TD WIDTH=70% ALIGN=LEFT> 
-	  <p>Visibility refers to where or how the variable is declared; the two kinds of visibility are global and local. Global variables are declared at the top of a program and are accessible throughout the entire program and all related functions. Local variables are defined inside a certain function, state, or other small part of a program and are not accessible beyond the outer limits of whatever they are declared in. </p>
-	  <p>In the picture on the right, notice the line highlighted in yellow and the Arduino error message. This will occur if you try to access a local variable outside of where it is defined.</p></TD>
-
-      <TD WIDTH=20% ALIGN=RIGHT><A HREF="Programming_Popups/LocalNotDefined.html" 
+<br><br>
+<div class="row">
+<div class="col-md-7">
+<br><br>
+<p><span class="vocabColor">Visibility</span> refers to where or how the variable is declared; the two kinds of visibility are global and local. <span class="vocabColor">Global</span> variables are declared at the top of a program and are accessible throughout the entire program and all related functions. <span clas="vocabColor">Local</span> variables are defined inside a certain function, state, or other small part of a program and are not accessible beyond the outer limits of whatever they are declared in. </p>
+	  <br>
+	  <p>In the picture on the right, notice the line highlighted in yellow and the Arduino error message. This will occur if you try to access a local variable outside of where it is defined.</p></div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4"><A HREF="Programming_Popups/LocalNotDefined.html" 
    onClick="return popup(this, 'Error - Local Variable Not Defined')"><img src="Programming_Pictures/LocalNotDefined.PNG" HEIGHT="400px" /img></A>
+   <br>
+   <center><span class="captionStyle">Error in Arduino</span></center></div>
+</div>
 
-   </TD>
-   </TR>
-   <TR>
-   <TD> </TD>
-   <TD ALIGN=CENTER><span class="captionStyle">Arduino Error with Local Variables </span></TD>
-   </TD>
-</TABLE>
 <br>
 
-<p>Static variables do not change between invocations in the program in which they are used; they are similar to global variables in that way. Static variables can only be manipulated or used in the function in which they are declared, but they do not lose their value between multiple function calls. </p>
+<div class="row">
+<div class="col-md-7">
 <br><br>
-
-<TABLE ALIGN=CENTER>
-<TR>
-	<TD WIDTH=50% ALIGN=CENTER> <img src="Programming_Pictures/Static.PNG" HEIGHT="400px" /img> </TD>
-	<TD WIDTH=100% ALIGN=LEFT> <img src="Programming_Pictures/StaticOutput.PNG" HEIGHT="300x" /img> </TD>
-</TR>
-</TABLE>
-<center><span class="captionStyle">Static Variables and Serial Output</span></center>
-<br><br
-
+<p><span class="vocabColor">Static</span> variables do not change between invocations in the program in which they are used; they are similar to global variables in that way. Static variables can only be manipulated or used in the function in which they are declared, but they do not lose their value between multiple function calls. </p>
+<br><br>
 <p>Finally, it is important to remember that variables are case sensitive. The common format for naming a variable is called “camel case” and consists of the first (or only) word in lower case and any additional words beginning with an uppercase letter. Variable names never have spaces; underscores are an acceptable alternative. </p>
-
+</div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4"><A HREF="Programming_Popups/StaticOutput.html" 
+   onClick="return popup(this, 'Satic Output')"><img src="Programming_Pictures/Static.PNG" HEIGHT="400px" /img></A>
+<center><span class="captionStyle">Static Variables and Serial Output</span></center></div>
+</div>
+<br><br>
 <h2>Operators</h2>
-
-<p>Operators are used in programs for the manipulation of data and variables. They are used for arithmetic, bit-wise operations, and comparisons. </p>
-
-<p>Arithmetical operators consist of adding (+), subtracting (-), multiplying (*), dividing (/), and modulo (%). Modulo gives the remainder after a division. For example, having an operation 5%3 would mean to divide 5 by 3 and output the remainder (2). Arithmetical operators can be combined as a sort of short-hand to make programs look cleaner: +=, -=, *=, /=. A short-hand operator can be used with two values where at least one is a variable: for example “a” and 5. The code would be written as “a += 5;” and it means “a” equals the sum of “a” and 5. Therefore, if “a” had been equal to 11 before that line, it would now be equal to 17. Each short-hand operator works much in this way. </p>
+<div class="row">
+<div class="col-md-7">
+<p>Operators are used in programs for the manipulation of data and variables. They are used for arithmetic, bit-wise operations, and comparisons. </p></div>
+</div>
 <br><br>
-
+<div class="row">
+<div class="col-md-7">
+<br><br>
+<p>Arithmetical operators consist of adding (+), subtracting (-), multiplying (*), dividing (/), and modulo (%). Modulo gives the remainder after a division. For example, having an operation 5%3 would mean to divide 5 by 3 and output the remainder (2). Arithmetical operators can be combined as a sort of short-hand to make programs look cleaner: +=, -=, *=, /=. A short-hand operator can be used with two values where at least one is a variable: for example “a” and 5. The code would be written as “a += 5;” and it means “a” equals the sum of “a” and 5. Therefore, if “a” had been equal to 11 before that line, it would now be equal to 17. Each short-hand operator works much in this way. </p> </div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
 	 <A HREF="Programming_Popups/Arithmetic.html" 
-   onClick="return popup(this, 'Arithmetical Operators')"><center><img src="Programming_Popups/Programming_Pictures/Arithmetic.PNG" HEIGHT="400" /img></center></A>
-   <center><span class="captionStyle">Arithmetic Operators</span></center>
+   onClick="return popup(this, 'Arithmetical Operators')"><img src="Programming_Popups/Programming_Pictures/Arithmetic.PNG" HEIGHT="400" /img></A><br>
+   <span class="captionStyle">Arithmetic Operators</span></div>
+</div>
 <br><br>
-<p>Relational operators consist mainly of less than (<), greater than (>), is equal to (==), and not (!). Relational operators “less than” and “greater than” can be combined with “equals” to achieve “less than or equal to” and “greater than or equal to.” “Not” can be combined with any of “less than,” “greater than,” and “equal to.” It is also important to note that when comparing two values to see if they are equal, a program must use two equal signs; using only one equals sign will simply reassign your variable rather than comparing it. </p>
+
+<div class="row">
+<div class="col-md-7">
+<br><br>
+<p>Relational operators consist mainly of less than (<), greater than (>), is equal to (==), and not (!). Relational operators “less than” and “greater than” can be combined with “equals” to achieve “less than or equal to” and “greater than or equal to.” “Not” can be combined with any of “less than,” “greater than,” and “equal to.” It is also important to note that when comparing two values to see if they are equal, a program must use two equal signs; using only one equals sign will simply reassign your variable rather than comparing it. </p></div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
 	 <A HREF="Programming_Popups/Relational.html" 
-   onClick="return popup(this, 'Relational Operators')"><center><img src="Programming_Popups/Programming_Pictures/Relational.PNG" HEIGHT="400px" /img></center></A>
-
-   <center><span class="captionStyle">Relational Operators</span></center>
+   onClick="return popup(this, 'Relational Operators')"><img src="Programming_Popups/Programming_Pictures/Relational.PNG" HEIGHT="400px" /img></A>
+	<br>
+   <span class="captionStyle">Relational Operators</span></div>
 <br><br>
-
+</div>
+<br><br>
 <h2>Logic</h2>
 
 <h3> If-Statements</h3>
 <h4>Syntax</h4>
-
-
 <span class="arduinoText"> if</span> <span class="codeText">(argument) {</span> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something</span>
 <br>
 <span class="codeText">}</span>
-
-
-   <br>
-<h4>What Are They?</h4>
-   <p>If-statements are tools that execute other statements if a certain condition is met. If-statements can be stand-alone; this means that they are only looking for one condition and executing in that specific case. They can also be used with an else-statement that serves as a catch-all for every instance when the condition isn’t met. </p>
-
-<h4>Example:</h4>
-
-<center><A HREF="Programming_Popups/IfExample.html" 
-   onClick="return popup(this, 'If-Statement Example')"><img src="Programming_Popups/Programming_Pictures/IfExample.PNG" HEIGHT="400px" /img></A></center>
-   
-   <center><span class="captionStyle">Example Using If-Statement in Arduino</span></center>
-   <center><p> What will this code print? Click on it for the answer</p></center>
 <br>
-<p>When a function or program needs to check more than one condition, an else-if can be implemented.</p>
 
+<div class="row">
+<div class="col-md-7">
+	<h4>What Are They?</h4>
+	<br>
+	<p><span class="vocabColor">If-statements</span> are tools that execute other statements if a certain condition is met. If-statements can be stand-alone; this means that they are only looking for one condition and executing in that specific case. They can also be used with an else-statement that serves as a catch-all for every instance when the condition isn’t met. </p>
+	</div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
+	<h4>Example:</h4>
+	<br>
+	<center><A HREF="Programming_Popups/IfExample.html" 
+	onClick="return popup(this, 'If-Statement Example')"><img src="Programming_Popups/Programming_Pictures/IfExample.PNG" HEIGHT="400px" /img></A></center>
+	<span class="captionStyle">Example Using If-Statement in Arduino</span>
+<p> What will this code print? Click on it for the answer</p>
+	</div>
+</div>
+<br><br>
+
+<div class="row">
+<div class="col-md-7">
+<br><br>
+<p>When a function or program needs to check more than one condition, an else-if can be implemented.</p>
+</div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
 <span class="arduinoText">
 if</span> <span class="codeText"> (argument) { </span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something</span> <br>
@@ -181,13 +220,21 @@ if</span> <span class="codeText"> (argument) { </span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something different</span><br>
 <span class="codeText">}</span> <br>
 </span>
+</div>
+</div>
 
-<p>Finally, sometimes there is a need to use an if-statement inside an if-statement. These are effective but not efficient. State machines are the cleaner way to accomplish the same goal. Find more information on state machines <A HREF="users.wpi.edu/~RBE1001book/StateMachines">here</A></p>
+<div class="row">
+<div class="col-md-7">
+<p>Finally, sometimes there is a need to use an if-statement inside an if-statement. These are effective but not efficient. State machines are the cleaner way to accomplish the same goal. Find more information on state machines <A HREF="users.wpi.edu/~RBE1001book/StateMachines">here</A></p></div>
+</div>
 
 <h2>Loops</h2>
-
-<p>Loops are used in programming to allow program statements to repeat a definite or indefinite amount of times.  The two main types of loops are while-loops and for-loops. </p>
-
+<br><br>
+<div class="row">
+<div class="col-md-7">
+<p>Loops are used in programming to allow program statements to repeat a definite or indefinite amount of times.  The two main types of loops are while-loops and for-loops. </p></div>
+</div>
+<br><br>
 <h3>While-Loops</h3>
 <h4>Syntax:</h4>
 <br>
@@ -198,53 +245,99 @@ if</span> <span class="codeText"> (argument) { </span><br>
 </span>
 <br>
 
-   
+<div class="row">
+<div class="col-md-7">  
+<br>
 <h4>What Are They?</h4>
-<p>While-loops are a type of loop that continues as long as a Boolean statement is true. The program runs through the loop checking the condition before running through each time. When the condition is found to be false, the loop “breaks” or stops repeating those statements and moves on to the next statement or function in the program. </p>
+<br>
+<p><span class="vocabColor">While-loops</span> are a type of loop that continues as long as a Boolean statement is true. The program runs through the loop checking the condition before running through each time. When the condition is found to be false, the loop “breaks” or stops repeating those statements and moves on to the next statement or function in the program. </p> </div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
 <h4>Example</h4>
-
+<br>
 <A HREF="Programming_Popups/WhileExample.html" 
    onClick="return popup(this, 'While-Loop Example')"><center><img src="Programming_Popups/Programming_Pictures/WhileExample.PNG" HEIGHT="400px" /img></center></A>
-
+	<br>
    <center><span class="captionStyle">Example of While-Loop Using Arduino</span></center>
+   <br>
    <center><p>Click on program to see how variable values will change</p>
    <p>Note: Print statements have been removed from this code for clarity</p></center>
+   </div>
+</div>
+
 <br>
 <h3>For-Loops</h3>
 <h4>Syntax:</h4>
 <br>
-<span class="arduinoText"> for </span> <span class="codeText"> (Initial Counter Value, Counter Limit, Counter Instruction) { </span><br>
+<span class="arduinoText"> for </span> <span class="codeText"> (Initial Counter Value; Counter Limit; Counter Instruction) { </span><br>
 <span class="commentText">//do something</span><br>
 <span class="codeText"> } </span>
 <br>
 
+<div class="row">
+<div class="col-md-7">
+<br>
 <h4>What Are They?</h4>
-<p>For-loops are loops that run a specified number of times before moving on to the next part of the code. For-loops have an index variable that simply keeps track of how many times the loop has run and either increments or decrements at the beginning of the loop. After adjusting the index variable, the loop then checks a conditional statement that compares the index to some pre-defined value; as long as the statement is true, the loop will run.</p>
+<br><br>
+<p><span class="vocabColor">For-loops</span> are loops that run a specified number of times before moving on to the next part of the code. For-loops have an index variable that simply keeps track of how many times the loop has run and either increments or decrements at the beginning of the loop. After adjusting the index variable, the loop then checks a conditional statement that compares the index to some pre-defined value; as long as the statement is true, the loop will run.</p></div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
 <h4>Example</h4>
+<br><br>
 <A HREF="Programming_Popups/WhileExample.html" 
    onClick="return popup(this, 'For-Loop Example')"><center><img src="Programming_Popups/Programming_Pictures/ForExample.PNG" HEIGHT="400px" /img></center></A>
-
-	<center><span class="captionStyle">Example of For-Loop Using Arduino</span></center>
-   <center><p>hat will this code print? Click on it for the answer</p></center>
+	<br>
+	<span class="captionStyle">Example of For-Loop Using Arduino</span>
+   <p>What will this code print? Click on it for the answer</p></div>
+</div>
 
 <h3>Break and Continue</h3>
-<p>Break is a tool that can stop a loop at any point, usually given a certain condition. When break is triggered, the program will move to the first lines below the loop and execute them. For example:</p>
-
-	<center><span class="arduinoText"> break; </span></center>
+<div class="row">
+<div class="col-md-7">
+<br><br>
+<p><span class="vocabColor">Break</span> is a tool that can stop a loop at any point, usually given a certain condition. When break is triggered, the program will move to the first lines below the loop and execute them.</p> </div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
 	<br>
-
+	<center><span class="arduinoText"> break; </span></center>
+	<br><br>
    <A HREF="Programming_Popups/BreakAndContinue.html" 
    onClick="return popup(this, 'Break')"><center><img src="Programming_Popups/Programming_Pictures/BreakExample.PNG" HEIGHT="400px" /img></center></A>
    <center><span class="captionStyle">Using Break with Arduino</span></center>
-   <br><br>
-<p>Continue is a tool that can alter the progression of a loop given a certain condition. When a loop has a continue condition and the condition is met, the program will skip over all the rest of the code in that loop and jump back to the top of the loop. The loop will then run again from the top. For example:</p>
+   <br><br></div>
+</div>
+
+<div class="row">
+<div class="col-md-7">
+<br>
+<p><span class="vocabColor">Continue</span> is a tool that can alter the progression of a loop given a certain condition. When a loop has a continue condition and the condition is met, the program will skip over all the rest of the code in that loop and jump back to the top of the loop. The loop will then run again from the top.</p> 
+</div>
+<div class="col-md-4">&nbsp;</div>
+<div class="col-md-4">
 	<center><span class="arduinoText"> continue; </span></center>
-
-   <br>
-   <A HREF="Programming_Popups/BreakAndContinue.html" 
-   onClick="return popup(this, 'Continue')"><center><img src="Programming_Popups/Programming_Pictures/Continue.PNG" HEIGHT="400px" /img></center></A>
-
-   <center><span class="captionStyle">Using Continue in Arduino</span></center>
+	<br><br>
+	<A HREF="Programming_Popups/BreakAndContinue.html" 
+	onClick="return popup(this, 'Continue')"><center><img src="Programming_Popups/Programming_Pictures/Continue.PNG" HEIGHT="400px" /img></center></A>
+	<center><span class="captionStyle">Using Continue in Arduino</span></center>
+	</div>
+</div>
+<br><br><br>
+<h3>Section Vocab</h3>
+<p>Variables - locations in memory for storing values and can change over time</p>
+<p>Char - Data type generally used for characters (or ASCII). Holds 1 Byte</p>
+<p>Int - Data type use for integer numbers. Holds 2 Bytes</p>
+<p>Unsigned Int - Data type used for larger, positive integer numbers. Holds 2 Bytes but can't be negative</p>
+<p>Long - Data type used to hold very large integer numbers. Holds 4 Bytes</p>
+<p>Float - Data type used for decimal numbers. Holds 4 Bytes and up to 6 decimal places</p>
+<p>Visibility - Where a variable is defined and where it can be accessed in a program</p>
+<p>Local Variable - Defined in a function. Can only be called in that function.</p>
+<p>Global Variable - Defined in the program set-up. Can be called anywhere in the program</p>
+<p>Static Variable - Variable value does not change between invocations</p>
+<p>If-Statements - Will execute program code if a certain condition is true</p>
+<p>While Loops - Will execute program code while a certain condition is true</p>
+<p>For Loops - Will execute program code for a certain, set number of iterations</p>
+<p>Break - Breaks a loop. Must be called in a loop.</p>
+<p>Continue - Skips to the end of the iteration of the loop without running program lines under it. Loop then starts over</p>
 
 <!-- CONTENT END -->
 </div>
