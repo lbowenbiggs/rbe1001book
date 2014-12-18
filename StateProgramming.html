@@ -79,9 +79,9 @@ return false;
 </UL>
 <br>
 <h2>Sequential Programming and Concurrent Tasks</h2>
-<p>Sequential programming is used for very basic programs; it is when a program must complete each task before it can move on to starting the next one. This can take a long time depending on the number and complexity of the tasks. For example, a robot program needed to drive and raise an arm up (assume the center of gravity is low enough that the robot can drive with the arm extended and not tip over). The robot could drive all the way to its destination and then move the arm or it could simply do both together. This is the idea behind <span class="vocabColor">state programming</span>. </p>
+<p>Sequential programming is used for very basic programs; it is when a program must complete each task before it can move on to starting the next one. This can take a long time depending on the number and complexity of the tasks. For example, a robot program needed to drive and raise an arm up (assume the center of gravity is low enough that the robot can drive with the arm extended and not tip over). The robot could drive all the way to its destination and then move the arm or it could simply do both together. This is the idea behind <span class="vocabColor"><b>state programming</b></span>. </p>
 
-<p>Essentially, a program can run in a loop that is checking to see if both tasks are done and continue running as long as they both are not. One thing to keep in mind with this is that the program needs to remember where each task is at the end of every iteration so that it can begin again when the loop starts over. The step that each task is on in the program is called the <span class="vocabColor">state</span>. A <span class="vocabColor">state machine</span> is a program that keeps track of states and divides up work for each task to do.</p>
+<p>Essentially, a program can run in a loop that is checking to see if both tasks are done and continue running as long as they both are not. One thing to keep in mind with this is that the program needs to remember where each task is at the end of every iteration so that it can begin again when the loop starts over. The step that each task is on in the program is called the <span class="vocabColor"><b>state</b></span>. A <span class="vocabColor"><b>state machine</b></span> is a program that keeps track of states and divides up work for each task to do.</p>
 <br>
 <h2>How to Use State Machines</h2>
 <p>States are really just numerical constants, but for program clarity and readability each state should be given a name. Because states are constants they should be defined at the very top of a program using <span class="codeText">#define</span>. It is important to remember that once those values are defined, they cannot be changed throughout the program. Defined constants are not given a place in memory; the program simply looks at the top of the code to find the associated value and plugs it in. After all the states are defined, it is important to set the initial state in <span class="codeText">setup()</span>. Without an initial defined value for state, the program will likely assign a random value to it and the program will likely never enter any of the states.</p>
@@ -138,7 +138,10 @@ state = state1; <br>
 </span>
 
 
-
+<h3>Section Vocab</h3>
+<p>State Programming: Program that has the ability to keep track of multiple states concurrently and execute parts of each task before the "previous" task has finished</p>
+<p>State: Step of each task that the program is on</p>
+<p>State Machine: Keeps track of states and tasks</p>
 
 <!-- CONTENT END -->
 </div>
