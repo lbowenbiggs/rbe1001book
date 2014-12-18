@@ -131,19 +131,19 @@ return false;
 <p>Interrupts can get tricky or messy if there are multiple things you are waiting for in a program. Imagine that same example, but on top of watching TV and waiting for the phone you also have to attend to someone at the door, food cooking in the kitchen and checking your social media accounts on your computer. What if the doorbell rings at the same time as the timer in the kitchen beeps, the phone rings, and your best friend messages you on your laptop? Which one would you handle first? To help combat this, interrupts can be assigned a level of importance. That way if multiple are triggered at the same time, the one with the lowest importance (most important) would go first, followed by the next lowest and so on until there are no more interrupts left to handle. The program would then return back to whatever it was doing before all of the interrupts were triggered.</p>
 <form>
 	<br/>
-	<label for="Long">Which sensor would you use to determine if your robot is in contact with a wall?</label>
+	<label for="LimitSwitch">Which sensor would you use to determine if your robot is in contact with a wall?</label>
 	<br/><input type="radio" id="direction" value="Light"> IR Sensor
 	<br/><input type="radio" id="direction" value="Gyro"> Gyro
 	<br/><input type="radio" id="direction" value="Limit"> Limit Switch
 	
 	<br/>
-	<label for="Long">Which sensor would you use to determine how far your robot has travelled?</label>
+	<label for="Encoder">Which sensor would you use to determine how far your robot has travelled?</label>
 	<br/><input type="radio" id="direction" value="Button"> Bump Sensor
 	<br/><input type="radio" id="direction" value="Encoder"> Encoder
 	<br/><input type="radio" id="direction" value="Pot"> Potentiometer
 	
 	<br/>
-	<label for="Long">Which of the following would be the best time to use an Interrupt Service Routine?</label>
+	<label for="ISR">Which of the following would be the best time to use an Interrupt Service Routine?</label>
 	<br/><input type="radio" id="direction" value="ISR"> Robot needs to autonomously drive forward but also needs to constantly check a line tracker. Robot must stop as soon as the line tracker sees a line.
 	<br/><input type="radio" id="direction" value="Sequential"> Robot needs to drive forward and move an arm once it gets to a loading zone.
 	<br/><input type="radio" id="direction" value="Square"> Robot needs to drive straight for one foot, then turn left, then repeat three more times to make a square.
