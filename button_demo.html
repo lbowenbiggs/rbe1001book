@@ -20,7 +20,9 @@ function myFunction() {
         x.checked = true;
     }
 }
-
+function updateParagraph(target, paragraph){
+    $(target).html(paragraph);
+}
 function myWrite() {
     document.getElementById("result").innerHTML = "Paragraph changed.";
 
