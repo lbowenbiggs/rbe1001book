@@ -31,6 +31,11 @@
   ga('create', 'UA-56500225-1', 'auto');
   ga('send', 'pageview');
 
+function updateParagraph(radio, target, paragraph){
+    	$(target).html(paragraph);
+    	$(radio).prop("checked", true);
+	}
+
 	</script>
 
 </head>
@@ -153,24 +158,32 @@ return false;
 <p>Interrupt Service Routines (ISRs) are used to help organize program flow and ensure that input from certain sensors are not overlooked. ISRs will stop all normal program flow when triggered and the program will run the routine or function before going back to what it was doing before. The alternative is to “poll” for results, which really means just continuously checking to see if the sensor has new data. </p>
 <p>For example, imagine you are sitting at home watching television and waiting for a phone call. A programmer trying to handle this would see that there are two solutions: polling and interrupts. The polling solution would be to watch TV, then check the phone to see if anyone is there, then watch TV again, then pick up the phone again and so on. The interrupt solution would be to watch TV while listening for the phone to ring; if it does, simply stop the show and answer the phone then resume the show after hanging up. </p>
 <p>Interrupts can get tricky or messy if there are multiple things you are waiting for in a program. Imagine that same example, but on top of watching TV and waiting for the phone you also have to attend to someone at the door, food cooking in the kitchen and checking your social media accounts on your computer. What if the doorbell rings at the same time as the timer in the kitchen beeps, the phone rings, and your best friend messages you on your laptop? Which one would you handle first? To help combat this, interrupts can be assigned a level of importance. That way if multiple are triggered at the same time, the one with the lowest importance (most important) would go first, followed by the next lowest and so on until there are no more interrupts left to handle. The program would then return back to whatever it was doing before all of the interrupts were triggered.</p>
+
+<h2>Concept Questions</h2>
 <form>
 	<br/>
-	<label for="LimitSwitch">Which sensor would you use to determine if your robot is in contact with a wall?</label>
-	<br/><input type="radio" id="direction" value="Light"> IR Sensor
-	<br/><input type="radio" id="direction" value="Gyro"> Gyro
-	<br/><input type="radio" id="direction" value="Limit"> Limit Switch
-	
+	<label for="sensor">Which sensor would you use to determine if your robot is in contact with a wall?</label>
 	<br/>
-	<label for="Encoder">Which sensor would you use to determine how far your robot has travelled?</label>
-	<br/><input type="radio" id="direction" value="Button"> Bump Sensor
-	<br/><input type="radio" id="direction" value="Encoder"> Encoder
-	<br/><input type="radio" id="direction" value="Pot"> Potentiometer
-	
+	<div onclick="updateParagraph('#Light','#sensor_result', 'correct');"><input type="radio" id="Light" value="Light" name="sensor"/> IR Sensor</div>
+	<div onclick="updateParagraph('#Gyro','#sensor_result', 'wrong');"><input type="radio" id="Gyro" value="Gyro" name="sensor"/> Gyro</div>
+	<div onclick="updateParagraph('#Limit','#sensor_result', 'wrong');"><input type="radio" id="Limit" value="Limit" name="sensor"/> Limit Switch</div>
+	<p id="sensor_result" style="min-height:20px;"></p>
+
 	<br/>
-	<label for="ISR">Which of the following would be the best time to use an Interrupt Service Routine?</label>
-	<br/><input type="radio" id="direction" value="ISR"> Robot needs to autonomously drive forward but also needs to constantly check a line tracker. Robot must stop as soon as the line tracker sees a line.
-	<br/><input type="radio" id="direction" value="Sequential"> Robot needs to drive forward and move an arm once it gets to a loading zone.
-	<br/><input type="radio" id="direction" value="Square"> Robot needs to drive straight for one foot, then turn left, then repeat three more times to make a square.
+	<label for="travelled">Which sensor would you use to determine how far your robot has travelled?</label>
+	<br/>
+	<div onclick="updateParagraph('#Button','#travelled_result', 'correct');"><input type="radio" id="Button" value="Button" name="travelled"/> Bump Sensor</div>
+	<div onclick="updateParagraph('#Encoder','#travelled_result', 'wrong');"><input type="radio" id="Encoder" value="Encoder" name="travelled"/> Encoder</div>
+	<div onclick="updateParagraph('#Pot','#travelled_result', 'wrong');"><input type="radio" id="Pot" value="Pot" name="travelled"/> Potentiometer</div>
+	<p id="travelled_result" style="min-height:20px;"></p>
+
+	<br/>
+	<label for="isr">Which of the following would be the best time to use an Interrupt Service Routine?</label>
+	<br/>
+	<div onclick="updateParagraph('#ISR','#isr_result', 'correct');"><input type="radio" id="ISR" value="ISR" name="isr"/> Robot needs to autonomously drive forward but also needs to constantly check a line tracker. Robot must stop as soon as the line tracker sees a line. </div>
+	<div onclick="updateParagraph('#Sequential','#isr_result', 'wrong');"><input type="radio" id="Sequential" value="Sequential" name="isr"/> Robot needs to drive forward and move an arm once it gets to a loading zone. </div>
+	<div onclick="updateParagraph('#Square','#isr_result', 'wrong');"><input type="radio" id="Square" value="Square" name="isr"/> Robot needs to drive straight for one foot, then turn left, then repeat three more times to make a square. </div>
+	<p id="isr_result" style="min-height:20px;"></p>
 </form>
 <!-- CONTENT END -->
 </div>
