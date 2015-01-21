@@ -29,8 +29,9 @@
   ga('create', 'UA-56500225-1', 'auto');
   ga('send', 'pageview');
 
-  	function updateParagraph(target, paragraph){
-    $(target).html(paragraph);
+  	function updateParagraph(radio, target, paragraph){
+    	$(target).html(paragraph);
+    	$(radio).prop("checked", true);
 	}
 
 	</script>
