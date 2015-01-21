@@ -31,6 +31,11 @@
   ga('create', 'UA-56500225-1', 'auto');
   ga('send', 'pageview');
 
+function updateParagraph(radio, target, paragraph){
+    	$(target).html(paragraph);
+    	$(radio).prop("checked", true);
+	}
+
 	</script>
 
 </head>
@@ -345,33 +350,42 @@ if</span> <span class="codeText"> (argument) { </span><br>
 	<center><span class="captionStyle">Using Continue in Arduino</span></center>
 	</div>
 </div>
+
 <h2>Concept Questions</h2>
 <form>
-	<label for="Float">Which data type can represent the number 12.5?</label>
-	<br/><input type="radio" id="direction" value="Int"> Int 
-	<br/><input type="radio" id="direction" value="Float"> Float
-	<br/><input type="radio" id="direction" value="Char"> Char
+	<label for="float">Which data type can represent the number 12.5?</label>
+	<br/>
+	<div onclick="updateParagraph('#Int','#float_result', 'correct');"><input type="radio" id="Int" value="Int" name="float"/> Int  </div>
+	<div onclick="updateParagraph('#Float','#float_result', 'wrong');"><input type="radio" id="Float" value="Float" name="float"/> Float </div>
+	<div onclick="updateParagraph('#Char','#float_result', 'wrong');"><input type="radio" id="Char" value="Char" name="float"/> Char </div>
+	<p id="float_result" style="min-height:20px;"></p>
 	
 	<br/>
 	<label for="Long">Which data type can represent the number 10,000?</label>
-	<br/><input type="radio" id="direction" value="Int"> Int 
-	<br/><input type="radio" id="direction" value="Float"> Float
-	<br/><input type="radio" id="direction" value="Char"> Char
+	<br/>
+	<div onclick="updateParagraph('#Long_Int','#Long_result', 'correct');"><input type="radio" id="Long_Int" value="Long_Int" name="Long"/> Int  </div>
+	<div onclick="updateParagraph('#Long_Float','#Long_result', 'wrong');"><input type="radio" id="Long_Float" value="Long_Float" name="Long"/> Float </div>
+	<div onclick="updateParagraph('#Long_Char','#Long_result', 'wrong');"><input type="radio" id="Long_Char" value="Long_Char" name="Long"/> Char </div>
+	<p id="Long_result" style="min-height:20px;"></p>
 	
 	<br/>
 	<label for="Iterations">Recall the <A HREF="Programming_Popups/WhileExample.html" 
    onClick="return popup(this, 'While-Loop Example')">while-loop example</A> from earlier.
 	After how many iterations will the program re-enter the if-statement?</label>
-	<br/><input type="radio" id="direction" value="Six"> 6
-	<br/><input type="radio" id="direction" value="ThirtyThousand"> 32,767
-	<br/><input type="radio" id="direction" value="Ten"> 10
+	<br/>
+	<div onclick="updateParagraph('#Six','#Iterations_result', 'correct');"><input type="radio" id="Six" value="Six" name="Iterations"> 6</div>
+	<div onclick="updateParagraph('#ThirtyThousand','#Iterations_result', 'wrong');"><input type="radio" id="ThirtyThousand" value="ThirtyThousand" name="Iterations"> 32,767</div>
+	<div onclick="updateParagraph('#Ten','#Iterations_result', 'wrong');"><input type="radio" id="Ten" value="Ten" name="Iterations"> 10</div>
+	<p id="Iterations_result" style="min-height:20px;"></p>
 	
 	<br/>
 	<label for="ForLoop">Suppose you need a program to run the same exact lines of code ten times.
 	Which of the following would be the most efficient to accomplish this task?</label>
-	<br/><input type="radio" id="direction" value="For"> For-Loop
-	<br/><input type="radio" id="direction" value="If"> If-Statement
-	<br/><input type="radio" id="direction" value="While"> While-Loop
+	<br/>
+	<div onclick="updateParagraph('#For','#ForLoop_result', 'correct');"><input type="radio" id="For" value="For" name="ForLoop"> For-Loop </div>
+	<div onclick="updateParagraph('#If','#ForLoop_result', 'wrong');"><input type="radio" id="If" value="If" name="ForLoop"> If-Statement </div>
+	<div onclick="updateParagraph('#While','#ForLoop_result', 'wrong');"><input type="radio" id="While" value="While" name="ForLoop"> While-Loop </div>
+	<p id="ForLoop_result" style="min-height:20px;"></p>
 </form>
 
 
