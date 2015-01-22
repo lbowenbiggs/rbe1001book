@@ -6,6 +6,7 @@ html {
 body {
 	margin-bottom: 60px;
 	padding-top: 50px;
+	text-align: justify;
 }
 
 .theme-showcase .container {
