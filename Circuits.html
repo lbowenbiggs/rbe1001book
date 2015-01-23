@@ -283,25 +283,25 @@ closed path </p>
 
 <h2>Concept Questions</h2>
 <form>
-	<label for="Series">For which configuration of resistors would you add resistors to get equivalent resistance?</label>
+	<label for="Series">For which configuration of resistors would you add the value of the resistors to get equivalent resistance?</label>
 	<br/>
-	<div onclick="updateParagraph('#Parallel','#series_result', 'correct'); _gaq.push(['_trackEvent', 'checkQuestion', 'correct_click', 'Circuits.Series']);"><input type="radio" id="Parallel" value="Parallel" name="series"/> Parallel</div>
-	<div onclick="updateParagraph('#Series','#series_result', 'wrong'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Series'])"><input type="radio" id="Series" value="Series" name="series"/> Series</div>
+	<div onclick="updateParagraph('#Parallel','#series_result', 'Consider reviewing the  Series and Parallel Section again'); _gaq.push(['_trackEvent', 'checkQuestion', 'correct_click', 'Circuits.Series']);"><input type="radio" id="Parallel" value="Parallel" name="series"/> Parallel</div>
+	<div onclick="updateParagraph('#Series','#series_result', 'Correct!'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Series'])"><input type="radio" id="Series" value="Series" name="series"/> Series</div>
 	<p id="series_result" style="min-height:20px;"></p>
 	<br/>
 	<label for="Equations">Which of the following is true?</label>
 	<br/>
-	<div onclick="updateParagraph('#Power', '#equations_result', 'correct'); _gaq.push(['_trackEvent', 'checkQuestion', 'correct_click', 'Circuits.Equations'])"><input type="radio" id="Power" value="Power" name="equations"/> P = V/I</div>
-	<div onclick="updateParagraph('#Voltage', '#equations_result', 'wrong'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Equations'])"><input type="radio" id="Voltage" value="Voltage" name="equations"/> V = P*I</div>
-	<div onclick="updateParagraph('#Current', '#equations_result', 'wrong'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Equations'])"><input type="radio" id="Current" value="Current" name="equations"/> I = V/R</div>
+	<div onclick="updateParagraph('#Power', '#equations_result', 'Consider reviewing the power and voltage equations again'); _gaq.push(['_trackEvent', 'checkQuestion', 'correct_click', 'Circuits.Equations'])"><input type="radio" id="Power" value="Power" name="equations"/> P = V/I</div>
+	<div onclick="updateParagraph('#Voltage', '#equations_result', 'Consider reviewing the power and voltage equations again'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Equations'])"><input type="radio" id="Voltage" value="Voltage" name="equations"/> V = P*I</div>
+	<div onclick="updateParagraph('#Current', '#equations_result', 'Correct!'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Equations'])"><input type="radio" id="Current" value="Current" name="equations"/> I = V/R</div>
 	<p id="equations_result" style="min-height:20px;"></p>
 
 	<br/>
 	<label for="Parallel">What would be the equivalent resistance of three 330 Ohm resistors in parallel?</label>
 	<br/>
-	<div onclick="updateParagraph('#NineNinety', '#parallel_result', 'correct'); _gaq.push(['_trackEvent', 'checkQuestion', 'correct_click', 'Circuits.Parallel'])"><input type="radio" id="NineNinety" value="NineNinety" name="parallel"/> 990 Ohms</div>
-	<div onclick="updateParagraph('#Sixty', '#parallel_result', 'wrong') _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Parallel']);"><input type="radio" id="Sixty" value="Sixty" name="parallel"/> 60 Ohms</div>
-	<div onclick="updateParagraph('#OneTen', '#parallel_result', 'wrong'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Parallel'])"><input type="radio" id="OneTen" value="OneTen" name="parallel"/> 110 Ohms</div>
+	<div onclick="updateParagraph('#NineNinety', '#parallel_result', 'Double check your equation. Consider reviewing the section on Resistors in Parallel'); _gaq.push(['_trackEvent', 'checkQuestion', 'correct_click', 'Circuits.Parallel'])"><input type="radio" id="NineNinety" value="NineNinety" name="parallel"/> 990 Ohms</div>
+	<div onclick="updateParagraph('#Sixty', '#parallel_result', 'Double check your equation. Consider reviewing the section on Resistors in Parallel') _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Parallel']);"><input type="radio" id="Sixty" value="Sixty" name="parallel"/> 60 Ohms</div>
+	<div onclick="updateParagraph('#OneTen', '#parallel_result', 'Correct!'); _gaq.push(['_trackEvent', 'checkQuestion', 'wrong_click', 'Circuits.Parallel'])"><input type="radio" id="OneTen" value="OneTen" name="parallel"/> 110 Ohms</div>
 	<p id="parallel_result" style="min-height:20px;"></p>
 </form>
 

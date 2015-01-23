@@ -164,25 +164,25 @@ return false;
 	<br/>
 	<label for="sensor">Which sensor would you use to determine if your robot is in contact with a wall?</label>
 	<br/>
-	<div onclick="updateParagraph('#Light','#sensor_result', 'correct');"><input type="radio" id="Light" value="Light" name="sensor"/> IR Sensor</div>
-	<div onclick="updateParagraph('#Gyro','#sensor_result', 'wrong');"><input type="radio" id="Gyro" value="Gyro" name="sensor"/> Gyro</div>
-	<div onclick="updateParagraph('#Limit','#sensor_result', 'wrong');"><input type="radio" id="Limit" value="Limit" name="sensor"/> Limit Switch</div>
+	<div onclick="updateParagraph('#Light','#sensor_result', 'Consider reviewing the Mechanical Sensors section again');"><input type="radio" id="Light" value="Light" name="sensor"/> IR Sensor</div>
+	<div onclick="updateParagraph('#Gyro','#sensor_result', 'Consider reviewing the Mechanical Sensors section again');"><input type="radio" id="Gyro" value="Gyro" name="sensor"/> Gyro</div>
+	<div onclick="updateParagraph('#Limit','#sensor_result', 'Correct!');"><input type="radio" id="Limit" value="Limit" name="sensor"/> Limit Switch</div>
 	<p id="sensor_result" style="min-height:20px;"></p>
 
 	<br/>
 	<label for="travelled">Which sensor would you use to determine how far your robot has travelled?</label>
 	<br/>
-	<div onclick="updateParagraph('#Button','#travelled_result', 'correct');"><input type="radio" id="Button" value="Button" name="travelled"/> Bump Sensor</div>
-	<div onclick="updateParagraph('#Encoder','#travelled_result', 'wrong');"><input type="radio" id="Encoder" value="Encoder" name="travelled"/> Encoder</div>
-	<div onclick="updateParagraph('#Pot','#travelled_result', 'wrong');"><input type="radio" id="Pot" value="Pot" name="travelled"/> Potentiometer</div>
+	<div onclick="updateParagraph('#Button','#travelled_result', 'Consider reviewing the Orientation Sensors section again');"><input type="radio" id="Button" value="Button" name="travelled"/> Bump Sensor</div>
+	<div onclick="updateParagraph('#Encoder','#travelled_result', 'Correct!');"><input type="radio" id="Encoder" value="Encoder" name="travelled"/> Encoder</div>
+	<div onclick="updateParagraph('#Pot','#travelled_result', 'Consider reviewing the Orientation Sensors section again');"><input type="radio" id="Pot" value="Pot" name="travelled"/> Potentiometer</div>
 	<p id="travelled_result" style="min-height:20px;"></p>
 
 	<br/>
 	<label for="isr">Which of the following would be the best time to use an Interrupt Service Routine?</label>
 	<br/>
-	<div onclick="updateParagraph('#ISR','#isr_result', 'correct');"><input type="radio" id="ISR" value="ISR" name="isr"/> Robot needs to autonomously drive forward but also needs to constantly check a line tracker. Robot must stop as soon as the line tracker sees a line. </div>
-	<div onclick="updateParagraph('#Sequential','#isr_result', 'wrong');"><input type="radio" id="Sequential" value="Sequential" name="isr"/> Robot needs to drive forward and move an arm once it gets to a loading zone. </div>
-	<div onclick="updateParagraph('#Square','#isr_result', 'wrong');"><input type="radio" id="Square" value="Square" name="isr"/> Robot needs to drive straight for one foot, then turn left, then repeat three more times to make a square. </div>
+	<div onclick="updateParagraph('#ISR','#isr_result', 'Correct!');"><input type="radio" id="ISR" value="ISR" name="isr"/> Robot needs to autonomously drive forward but also needs to constantly check a line tracker. Robot must stop as soon as the line tracker sees a line. </div>
+	<div onclick="updateParagraph('#Sequential','#isr_result', 'Consider reviewing the Interrupt Service Routine section again');"><input type="radio" id="Sequential" value="Sequential" name="isr"/> Robot needs to drive forward and move an arm once it gets to a loading zone. </div>
+	<div onclick="updateParagraph('#Square','#isr_result', 'Consider reviewing the Interrupt Service Routine section again');"><input type="radio" id="Square" value="Square" name="isr"/> Robot needs to drive straight for one foot, then turn left, then repeat three more times to make a square. </div>
 	<p id="isr_result" style="min-height:20px;"></p>
 </form>
 <!-- CONTENT END -->
