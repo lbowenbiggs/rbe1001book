@@ -117,7 +117,6 @@ return false;
 <br><br>
 <p>Constants are values in a program that cannot change throughout a program’s execution. When a constant is defined, a program essentially just sees the constant and pastes the defined value into the function instead. Constants can be initialized using pound-define (#define) and are usually declared in all capital letters. <span class="vocabColor"><b>Variables</b></span> are locations in memory for storing values and can change over time. All variables have a type (int, long, char, etc.) and a visibility: global or local. Further, variables in certain instances can be static.</p>
 </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
       <A HREF="Programming_Popups/Local&Global.html" 
    onClick="return popup(this, 'Local and Global Variables')"><center><img src="Programming_Popups/Programming_Pictures/Local&Global.PNG"  HEIGHT="400px" /img></center></A>
@@ -133,7 +132,6 @@ return false;
 <br><br>
 <p> Type refers to what can be stored in a variable; different types can hold different values. For example, an <span class="vocabColor"><b>int</b></span>, or integer, can hold two bytes (or values from -32,768 to 32,767) while a <span class="vocabColor"><b>char</b></span>, or character, can hold one byte (or values from 0-255). For this reason, ints are usually used for numbers while chars are usually used for alphanumeric symbols.</p>
 </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4"> <A HREF="Programming_Popups/DataTypes.html" 
    onClick="return popup(this, 'Data Types')"><center><img src="Programming_Popups/Programming_Pictures/DataTypes.png"  HEIGHT="200px" /img></center></A>
    <center><span class="captionStyle">Data Types and Sizes</span></center>
@@ -148,7 +146,6 @@ return false;
 <p><span class="vocabColor"><b>Visibility</b></span> refers to where or how the variable is declared; the two kinds of visibility are global and local. <span class="vocabColor"><b>Global</b></span> variables are declared at the top of a program and are accessible throughout the entire program and all related functions. <span clas="vocabColor">Local</b></span> variables are defined inside a certain function, state, or other small part of a program and are not accessible beyond the outer limits of whatever they are declared in. </p>
 	  <br>
 	  <p>In the picture on the right, notice the line highlighted in yellow and the Arduino error message. This will occur if you try to access a local variable outside of where it is defined.</p></div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4"><A HREF="Programming_Popups/LocalNotDefined.html" 
    onClick="return popup(this, 'Error - Local Variable Not Defined')"><img src="Programming_Pictures/LocalNotDefined.PNG" HEIGHT="400px" /img></A>
    <br>
@@ -164,7 +161,6 @@ return false;
 <br><br>
 <p>Finally, it is important to remember that variables are case sensitive. The common format for naming a variable is called “camel case” and consists of the first (or only) word in lower case and any additional words beginning with an uppercase letter. Variable names never have spaces; underscores are an acceptable alternative. </p>
 </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4"><A HREF="Programming_Popups/StaticOutput.html" 
    onClick="return popup(this, 'Satic Output')"><img src="Programming_Pictures/Static.PNG" HEIGHT="400px" /img></A>
 <center><span class="captionStyle">Static Variables and Serial Output</span></center></div>
@@ -180,7 +176,6 @@ return false;
 <div class="col-md-7">
 <br><br>
 <p>Arithmetical operators consist of adding (+), subtracting (-), multiplying (*), dividing (/), and modulo (%). Modulo gives the remainder after a division. For example, having an operation 5%3 would mean to divide 5 by 3 and output the remainder (2). Arithmetical operators can be combined as a sort of short-hand to make programs look cleaner: +=, -=, *=, /=. A short-hand operator can be used with two values where at least one is a variable: for example “a” and 5. The code would be written as “a += 5;” and it means “a” equals the sum of “a” and 5. Therefore, if “a” had been equal to 11 before that line, it would now be equal to 17. Each short-hand operator works much in this way. </p> </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 	 <A HREF="Programming_Popups/Arithmetic.html" 
    onClick="return popup(this, 'Arithmetical Operators')"><img src="Programming_Popups/Programming_Pictures/Arithmetic.PNG" HEIGHT="400" /img></A><br>
@@ -192,7 +187,6 @@ return false;
 <div class="col-md-7">
 <br><br>
 <p>Relational operators consist mainly of less than (<), greater than (>), is equal to (==), and not (!). Relational operators “less than” and “greater than” can be combined with “equals” to achieve “less than or equal to” and “greater than or equal to.” “Not” can be combined with any of “less than,” “greater than,” and “equal to.” It is also important to note that when comparing two values to see if they are equal, a program must use two equal signs; using only one equals sign will simply reassign your variable rather than comparing it. </p></div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 	 <A HREF="Programming_Popups/Relational.html" 
    onClick="return popup(this, 'Relational Operators')"><img src="Programming_Popups/Programming_Pictures/Relational.PNG" HEIGHT="400px" /img></A>
@@ -217,7 +211,6 @@ return false;
 	<br>
 	<p><span class="vocabColor"><b>If-statements</b></span> are tools that execute other statements if a certain condition is met. If-statements can be stand-alone; this means that they are only looking for one condition and executing in that specific case. They can also be used with an else-statement that serves as a catch-all for every instance when the condition isn’t met. </p>
 	</div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 	<h4>Example:</h4>
 	<br>
@@ -234,7 +227,6 @@ return false;
 <br><br>
 <p>When a function or program needs to check more than one condition, an else-if can be implemented.</p>
 </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 <span class="arduinoText">
 if</span> <span class="codeText"> (argument) { </span><br>
@@ -280,7 +272,6 @@ if</span> <span class="codeText"> (argument) { </span><br>
 <h4>What Are They?</h4>
 <br>
 <p><span class="vocabColor"><b>While-loops</b></span> are a type of loop that continues as long as a Boolean statement is true. The program runs through the loop checking the condition before running through each time. When the condition is found to be false, the loop “breaks” or stops repeating those statements and moves on to the next statement or function in the program. </p> </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 <h4>Example</h4>
 <br>
@@ -309,7 +300,6 @@ if</span> <span class="codeText"> (argument) { </span><br>
 <h4>What Are They?</h4>
 <br><br>
 <p><span class="vocabColor"><b>For-loops</b></span> are loops that run a specified number of times before moving on to the next part of the code. For-loops have an index variable that simply keeps track of how many times the loop has run and either increments or decrements at the beginning of the loop. After adjusting the index variable, the loop then checks a conditional statement that compares the index to some pre-defined value; as long as the statement is true, the loop will run.</p></div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 <h4>Example</h4>
 <br><br>
@@ -325,7 +315,6 @@ if</span> <span class="codeText"> (argument) { </span><br>
 <div class="col-md-7">
 <br><br>
 <p><span class="vocabColor"><b>Break</b></span> is a tool that can stop a loop at any point, usually given a certain condition. When break is triggered, the program will move to the first lines below the loop and execute them.</p> </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 	<br>
 	<center><span class="arduinoText"> break; </span></center>
@@ -341,7 +330,6 @@ if</span> <span class="codeText"> (argument) { </span><br>
 <br>
 <p><span class="vocabColor"><b>Continue</b></span> is a tool that can alter the progression of a loop given a certain condition. When a loop has a continue condition and the condition is met, the program will skip over all the rest of the code in that loop and jump back to the top of the loop. The loop will then run again from the top.</p> 
 </div>
-<div class="col-md-4">&nbsp;</div>
 <div class="col-md-4">
 	<center><span class="arduinoText"> continue; </span></center>
 	<br><br>
