@@ -57,3 +57,11 @@ body {
 	font-family:"Lucida Console";
 	color:gray;
 }
+
+.offset:before { 
+ display: block; 
+ content: " "; 
+   height: 75px;      /* Give height of your fixed element */
+        margin-top: -75px; /* Give negative margin of your fixed element */   
+        visibility: hidden; 
+}
