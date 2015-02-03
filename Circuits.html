@@ -77,10 +77,12 @@
 <br/>
 <div class="container theme-showcase" role="main">
 <!-- CONTENT BEGIN -->
+<div class="row">
+<div class="col-md-9">
 <div class="jumbotron">
 	<div class="row">
 	<div class="col-md-8">
-		<h1>Circuits</h1>
+		<h1 id="title" class="offset">Circuits</h1>
 		<p>Introduction to Circuit Elements and Ohm's Law</p>
 	</div>
 	</div>
@@ -111,11 +113,10 @@ return false;
 //-->
 </SCRIPT>
 
-<h2>Circuits and Circuit Elements</h2>
+<h2 id="elements" class="offset">Circuits and Circuit Elements</h2>
 
 <div class="row">
 	<div class="col-md-7">
-	<br>
 	<p>A <span class="vocabColor"><b>circuit</b></span> is the interconnection of electrical 
 	devices in a circular path. To power the circuit, voltage is generated from a power source and 
 	moves through the wires and components. <span class="vocabColor"><b>Voltage</b></span> is the total work per unit charge 
@@ -123,7 +124,7 @@ return false;
 	charge is flowing through a wire or conductor is called <span class="vocabColor"><b>current</b></span>. Both current and voltage are required 
 	to achieve electrical power. </p> </div>
 	<div class="col-md-4">
-	<center><img src="Circuit_Pictures/Power.png" HEIGHT="150px" /></center>
+	<center><img src="Circuit_Pictures/Power.png" HEIGHT="100px" /></center>
 	<center><span class="captionStyle">Power Relation to Voltage and Current</span></center>
 	</div>
 </div>
@@ -131,7 +132,6 @@ return false;
 	
 <div class="row">
 	<div class="col-md-7">
-	<br><br>
 	<p> Some people have trouble conceptualizing electricity because they cannot see it. Try 
 	considering the circuit to instead be a system of pipes. Each pipe is essentially a very large 
 	wire. The power source, which is essentially a pump, takes in charge with low voltage and outputs 
@@ -143,7 +143,7 @@ return false;
 	water can flow freely; if the pipe is small, the water flow is much more restricted. Small 
 	resistors are basically large pipes, and large resistors are small pipes. </p> </div>
 	<div class="col-md-4">
-	<center><img src="Circuit_Pictures/WaterResistance.png" HEIGHT="200px" /></center>
+	<center><img src="Circuit_Pictures/WaterResistance.png" HEIGHT="250px" /></center>
 	<center><span class="captionStyle">Resistance Related to Water Pipe Analogy</span></center>
 	</div>
 </div>
@@ -168,22 +168,23 @@ return false;
 <center><span class="captionStyle">Reference for Calculating Resistor Values</span></center>
 <br><br>
 	
-<h3>Ohm's Law</h3>	
+<h3 id="ohm" class="offset">Ohm's Law</h3>	
 
 <div class="row">
 	<div class="col-md-7">
 	<p>Resistance and current can be used to determine voltage with <span class="vocabColor"><b>Ohm's Law</b></span>. Ohm’s law is the most important 
 	equation for basic circuitry. </p> </div>
 	<div class="col-md-4">
-	<center><img src="Circuit_Pictures/Ohms.png" HEIGHT="150px" /></center>
+	<center><img src="Circuit_Pictures/Ohms.png" HEIGHT="115px" /></center>
 	<center><span class="captionStyle">Ohm's Law</span></center> </div>
 </div>
-
+<br>
 <div class="row">
 	<div class="col-md-7">
+	<br>
 	<p>That equation can then be substituted into the Power equation from before. </p></div>
 	<div class="col-md-4">
-	<center><img src="Circuit_Pictures/Power_Equivalence.png" HEIGHT="60px" /></center>
+	<center><img src="Circuit_Pictures/Power_Equivalence.png" HEIGHT="50px" /></center>
 	<center><span class="captionStyle">Variations on Power Formula</span></center> </div>
 </div>
 
@@ -193,8 +194,7 @@ components are connected </p>
 <p><span class="vocabColor"><b>Loop</b></span>: An ordered sequence of nodes forming a 
 closed path </p>
 
-<p><h2>Parallel and Series Resistors</h2></p>
-<br><br>
+<h2 id="resistors" class="offset">Parallel and Series Resistors</h2>
 
 <div class="row">
 	<div class="col-md-7">
@@ -210,6 +210,7 @@ closed path </p>
 	elements in the loop. Resistors in parallel combine by adding the reciprocal sum of each value. 
 	In the figure below, resistors C and D are in parallel. </p> </div>
 	<div class="col-md-4">
+	<br><br>
 	<center><img src="Circuit_Pictures/Parallel_Series.png" HEIGHT="100px" /></center>
 	<center><span class="captionStyle">Equations for Reducing Parallel and Series Resistors</span></center> </div>
 </div>
@@ -221,17 +222,16 @@ closed path </p>
 	<div class="col-md-6">
 	<A HREF="Circuit_Popups/Example.html" 
    onClick="return popup(this, 'Local and Global Variables')">
-	<img src="Circuit_Pictures/Example_Circuit.png"  HEIGHT="200px" /></A></div>
+	<img src="Circuit_Pictures/Example_Circuit.png"  HEIGHT="175x" /></A></div>
 	<div class="col-md-6">
+	<br>
     <img src="Circuit_Pictures/Example_Values.png"  HEIGHT="150px" /> </div>
 </div>
 <br>
 <p>Try to reduce the circuit above. Click on the circuit for the solution.</p>
 <br><br>
 
-<h2>Explanation of Series and Parallel</h2>
-<div class="row">
-	<div class="col-md-7">
+<h2 id="explanation" class="offset">Explanation of Series and Parallel</h2>
 	<p>Why do series resistors simply add together while parallel ones are so much more different? The 
 	reasoning lies in how the current moves through the circuit. When resistors are in series current 
 	is able to flow through all of the resistors in a single loop. So the equivalent resistance of 
@@ -241,11 +241,10 @@ closed path </p>
 	loop. It is important to note that when current flows through a loop of parallel resistors, it 
 	splits in a way that is proportional to the resistance of the resistors; higher resistors will 
 	have less current flowing through them and vice versa to ensure that there is the same amount of 
-	voltage going through the entire circuit. </p></div>
-</div>
+	voltage going through the entire circuit. </p>
 <br><br>
 
-<p><h2>Kirchoff's Voltage and Current Laws</h2></p>
+<h2 id="kcl" class="offset">Kirchoff's Voltage and Current Laws</h2>
 <br>
 <div class="row">
 	<div class="col-md-6">
@@ -299,7 +298,7 @@ closed path </p>
 	<p id="parallel_result" style="min-height:20px;"></p>
 </form>
 
-<h3>Section Vocab</h3>
+<h3 id="vocab" class="offset">Section Vocab</h3>
 <p>Circuit: The interconnection of electrical devices in a circular path</p>
 <p>Voltage: Total work per unit charge associated with the motion of charge between two points. Measured in Volts(V)</p>
 <p>Current: The rate at which the electrical charge is flowing through a wire or conductor. Measured in Amps (A)</p>
@@ -312,6 +311,36 @@ closed path </p>
 <p>Parallel: Elements that form a loop with no other elements in the loop</p>
 <p>Kirchoff's Voltage Law: The algebraic sum of the voltages around a loop is zero</p>
 <p>Kirchoff's Current Law: The algebraic sum of all the currents entering a node is zero</p>
+</div>
+
+<div class="col-md-3">
+	<div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
+        <ul class="nav bs-docs-sidenav">
+            <li class>
+                <a href="#title">Top</a>
+            </li>
+            <li>
+                <a href="#elements">Circuits and Circuit Components</a>
+            </li>
+            <li>
+                <a href="#ohm">Ohm's Law</a>  
+			</li>				
+			<li>
+				<a href="#resistors">Parallel and Series Resistors</a>
+			</li>
+			<li>
+				<a href="#explanation">Explanation of Series and Parallel</a>
+			</li>
+			<li>
+				<a href="#kcl">Kirchoff's Current and Voltage Laws</a>
+			</li>
+			<li>
+				<a href="#vocab">Section Vocab</a>
+			</li>              
+        </ul>
+    </div>
+</div>
+</div>
 <!-- CONTENT END -->
 </div>
 

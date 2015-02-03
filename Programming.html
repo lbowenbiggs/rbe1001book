@@ -74,10 +74,12 @@ function updateParagraph(radio, target, paragraph){
 <br/>
 <div class="container theme-showcase" role="main">
 <!-- CONTENT BEGIN -->
+<div class="row">
+<div class="col-md-9">
 <div class="jumbotron">
 	<div class="row">
 	<div class="col-md-8">
-		<h1>Programming</h1>
+		<h1 id="title" class="offset">Programming</h1>
 		<p>Introduction to Programming in C and Arduino</p>
 	</div>
 	</div>
@@ -110,7 +112,7 @@ return false;
 <h4>All Vocab is Listed at the End of This Section</h4>
 <br>
 
-<h2>Constants and Variables</h2>
+<h2 id="vars" class="offset">Constants and Variables</h2>
 
 <div class="row">
 <div class="col-md-7">
@@ -129,11 +131,10 @@ return false;
 
 <div class="row">
 <div class="col-md-7">
-<br><br>
 <p> Type refers to what can be stored in a variable; different types can hold different values. For example, an <span class="vocabColor"><b>int</b></span>, or integer, can hold two bytes (or values from -32,768 to 32,767) while a <span class="vocabColor"><b>char</b></span>, or character, can hold one byte (or values from 0-255). For this reason, ints are usually used for numbers while chars are usually used for alphanumeric symbols.</p>
 </div>
 <div class="col-md-4"> <A HREF="Programming_Popups/DataTypes.html" 
-   onClick="return popup(this, 'Data Types')"><center><img src="Programming_Popups/Programming_Pictures/DataTypes.png"  HEIGHT="200px" /img></center></A>
+   onClick="return popup(this, 'Data Types')"><center><img src="Programming_Popups/Programming_Pictures/DataTypes.png"  HEIGHT="125px" /img></center></A>
    <center><span class="captionStyle">Data Types and Sizes</span></center>
    
 </div>
@@ -166,7 +167,7 @@ return false;
 <center><span class="captionStyle">Static Variables and Serial Output</span></center></div>
 </div>
 <br><br>
-<h2>Operators</h2>
+<h2 id="operators" class="offset">Operators</h2>
 <div class="row">
 <div class="col-md-7">
 <p>Operators are used in programs for the manipulation of data and variables. They are used for arithmetic, bit-wise operations, and comparisons. </p></div>
@@ -195,9 +196,9 @@ return false;
 <br><br>
 </div>
 <br><br>
-<h2>Logic</h2>
+<h2 id="logic" class="offset">Logic</h2>
 
-<h3> If-Statements</h3>
+<h3 id="if" class="offset"> If-Statements</h3>
 <h4>Syntax</h4>
 <span class="arduinoText"> if</span> <span class="codeText">(argument) {</span> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentText">//do something</span>
@@ -249,14 +250,11 @@ if</span> <span class="codeText"> (argument) { </span><br>
 <p>Finally, sometimes there is a need to use an if-statement inside an if-statement. These are effective but not efficient. State machines are the cleaner way to accomplish the same goal. Find more information on state machines <A HREF="users.wpi.edu/~RBE1001book/StateMachines">here</A></p></div>
 </div>
 
-<h2>Loops</h2>
+<h2 id="loops" class="offset">Loops</h2>
 <br><br>
-<div class="row">
-<div class="col-md-7">
-<p>Loops are used in programming to allow program statements to repeat a definite or indefinite amount of times.  The two main types of loops are while-loops and for-loops. </p></div>
-</div>
-<br><br>
-<h3>While-Loops</h3>
+<p>Loops are used in programming to allow program statements to repeat a definite or indefinite amount of times.  The two main types of loops are while-loops and for-loops. </p>
+<br>
+<h3 id="while" class="offset">While-Loops</h3>
 <h4>Syntax:</h4>
 <br>
 <span class="arduinoText">while</span> <span class="codeText">(condition) { </span><br>
@@ -286,7 +284,7 @@ if</span> <span class="codeText"> (argument) { </span><br>
 </div>
 
 <br>
-<h3>For-Loops</h3>
+<h3 id="for" class="offset">For-Loops</h3>
 <h4>Syntax:</h4>
 <br>
 <span class="arduinoText"> for </span> <span class="codeText"> (Initial Counter Value; Counter Limit; Counter Instruction) { </span><br>
@@ -310,15 +308,16 @@ if</span> <span class="codeText"> (argument) { </span><br>
    <p>What will this code print? Click on it for the answer</p></div>
 </div>
 
-<h3>Break and Continue</h3>
+<h3 id="break" class="offset">Break and Continue</h3>
+<br>
 <div class="row">
 <div class="col-md-7">
-<br><br>
-<p><span class="vocabColor"><b>Break</b></span> is a tool that can stop a loop at any point, usually given a certain condition. When break is triggered, the program will move to the first lines below the loop and execute them.</p> </div>
+<p><span class="vocabColor"><b>Break</b></span> is a tool that can stop a loop at any point, usually given a certain condition. When break is triggered, the program will move to the first lines below the loop and execute them.</p> 
+<br>
+<span class="arduinoText"> break; </span>
+</div>
 <div class="col-md-4">
-	<br>
-	<center><span class="arduinoText"> break; </span></center>
-	<br><br>
+
    <A HREF="Programming_Popups/BreakAndContinue.html" 
    onClick="return popup(this, 'Break')"><center><img src="Programming_Popups/Programming_Pictures/BreakExample.PNG" HEIGHT="400px" /img></center></A>
    <center><span class="captionStyle">Using Break with Arduino</span></center>
@@ -327,11 +326,12 @@ if</span> <span class="codeText"> (argument) { </span><br>
 
 <div class="row">
 <div class="col-md-7">
-<br>
+<br><br>
 <p><span class="vocabColor"><b>Continue</b></span> is a tool that can alter the progression of a loop given a certain condition. When a loop has a continue condition and the condition is met, the program will skip over all the rest of the code in that loop and jump back to the top of the loop. The loop will then run again from the top.</p> 
+<br>
+<span class="arduinoText"> continue; </span>
 </div>
 <div class="col-md-4">
-	<center><span class="arduinoText"> continue; </span></center>
 	<br><br>
 	<A HREF="Programming_Popups/BreakAndContinue.html" 
 	onClick="return popup(this, 'Continue')"><center><img src="Programming_Popups/Programming_Pictures/Continue.PNG" HEIGHT="400px" /img></center></A>
@@ -379,7 +379,7 @@ if</span> <span class="codeText"> (argument) { </span><br>
 
 
 <br><br><br>
-<h3>Section Vocab</h3>
+<h3 id="vocab" class="offset">Section Vocab</h3>
 <p>Variables - locations in memory for storing values and can change over time</p>
 <p>Char - Data type generally used for characters (or ASCII). Holds 1 Byte</p>
 <p>Int - Data type use for integer numbers. Holds 2 Bytes</p>
@@ -395,6 +395,46 @@ if</span> <span class="codeText"> (argument) { </span><br>
 <p>For Loops - Will execute program code for a certain, set number of iterations</p>
 <p>Break - Breaks a loop. Must be called in a loop.</p>
 <p>Continue - Skips to the end of the iteration of the loop without running program lines under it. Loop then starts over</p>
+</div>
+
+<div class="col-md-3">
+	<div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
+        <ul class="nav bs-docs-sidenav">
+            <li class>
+                <a href="#title">Top</a>
+            </li>
+            <li>
+                <a href="#vars">Constants and Variables</a>
+            </li>
+            <li>
+                <a href="#operators">Operators</a>  
+			</li>				
+			<li>
+				<a href="#logic">Logic</a>
+			</li>
+			<li>
+				<a href="#if">If-Statements</a>
+			</li>
+			<li>
+				<a href="#loops">Loops</a>
+			</li>
+			<li>
+				<a href="#while">While Loops</a>
+			</li>  
+			<li>
+				<a href="#for">For Loops</a>
+			</li> 
+			<li>
+				<a href="#break">Break and Continue</a>
+			</li>   
+			<li>
+				<a href="#vocab">Section Vocab</a>
+			</li>            
+        </ul>
+    </div>
+</div>
+</div>
+
 
 <!-- CONTENT END -->
 </div>

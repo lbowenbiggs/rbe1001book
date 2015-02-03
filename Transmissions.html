@@ -89,13 +89,13 @@ return false;
 <div class="col-md-9">
 <div class="jumbotron">
     <div class="row">
-        <h1 id="title" class="page-header">Power Transmission</h1>
+        <h1 id="title" class="offset" class="page-header">Power Transmission</h1>
         <p>This is a sample chapter of the Introduction to Robotics Engineering textbook, built for the 2014 RBE Book IQP.</p>
         <p>For questions, email <a href="mailto:rbebook@wpi.edu">rbebook@wpi.edu</a></p>
     </div>
 </div>
 
-<h1 id="what-is" class="page-header">What is a Power Transmission?</h1>
+<h1 id="what-is" class="offset" class="page-header">What is a Power Transmission?</h1>
 <div class="row">
 	<div class="col-md-7">
 	<br>
@@ -114,15 +114,15 @@ Remember: Power is Work divided by Time
 </div>
 
 
-<h1 id="types" class="page-header">What are the Types of Power Transmissions?</h1>
+<h1 id="types" class="offset" class="page-header">What are the Types of Power Transmissions?</h1>
 <p>The two main types of power transmissions used in mobile robots are gears and chains. 
 Gears come in many different varieties including spur gears, worm gears, differential gears, and more. 
 Each system has individual advantages and disadvantages as far as power input required or output given, space, weight, and functionality. 
 Chains are available in many sizes and strengths; this means they are easily adaptable to most designs.</p>
-
-<h2>Gears</h2>
+<br>
+<h2 id="gears" class="offset">Gears</h2>
 <p>Gears are the most common form of power transmissions. 
-The entire system of gears used to manipulate motor speed, torque or direction is called a <span class="vocabColor">gear reduction</span>.  For every power transmission using gears, there is, at minimum, a driver gear and a driven gear. A <span class="vocabColor"><b>driver gear</b></span> is the gear that is directly connected to the motor that then “drives” or turns the rest of the system. <b>Driver gears convert torque to force</b>. The <span class="vocabColor"><b>driven gear</b></span> is connected, directly or indirectly, to the driver gear and outputs power to the mechanism. <b>Driven gears convert force to torque</b>. Any gears between a driver gear and a driven gear that have no effect on the total system are called <span class="vocabColor"><b>idler</b></span> gears.</p>
+The entire system of gears used to manipulate motor speed, torque or direction is called a <span class="vocabColor"><b>gear reduction</b></span>.  For every power transmission using gears, there is, at minimum, a driver gear and a driven gear. A <span class="vocabColor"><b>driver gear</b></span> is the gear that is directly connected to the motor that then “drives” or turns the rest of the system. <b>Driver gears convert torque to force</b>. The <span class="vocabColor"><b>driven gear</b></span> is connected, directly or indirectly, to the driver gear and outputs power to the mechanism. <b>Driven gears convert force to torque</b>. Any gears between a driver gear and a driven gear that have no effect on the total system are called <span class="vocabColor"><b>idler</b></span> gears.</p>
 <br>
 <div class="row">
 	<div class="col-md-7"><br><br><p>A gear ratio determines what amount of the motor power will be converted to torque with the gear reduction. To find the gear ratio, you need to know the number of teeth (N) or the torque (τ) on both the driver and driven gears, as well as the efficiency of the gears.</p></div>
@@ -145,7 +145,7 @@ The entire system of gears used to manipulate motor speed, torque or direction i
 <p><span class="vocabColor"><b>Pressure Angle</b></span>: The angle between the tooth force and gear wheel tangent </p>
 <p><span class="vocabColor"><b>Diametral Pitch</b></span>: The number of teeth divided by the diameter of the gear. This is generally used to classify different gear sizes and types.</p>
 <br>
-<h2>Spur Gears</h2>
+<h2 id="spur" class="offset">Spur Gears</h2>
 <div class="row">
 	<div class="col-md-7">
 		<br><br>
@@ -169,13 +169,13 @@ The entire system of gears used to manipulate motor speed, torque or direction i
 	<center><span class="captionStyle">Odd and Even Numbers of Gears in a Transmission</span></center></div>
 </div>
 <br>
-<h2>Worm Gears</h2>
+<h2 id="worm" class="offset">Worm Gears</h2>
 <p>Worm gears are a specific type of gear that provide high torque outputs and are not able to be back driven. Worm gear transmissions may have gear reductions of up to 300:1. To determine the gear reduction, you have to divide the number of teeth on the gear by the number of teeth or spirals on the worm. However, because the spiral on the worm is continuous, it acts as one singular tooth. Therefore the reduction is simply a ratio of N:1, where N is the number of teeth on the gear.  If the worm has two spirals, then the ratio becomes N:2.  It is important to keep in mind that worm gears are generally very inefficient with η values between .25 and .75. </p>
 <br>
-<h2>Planetary Gears</h2>
+<h2 id="planet" class="offset">Planetary Gears</h2>
 <p>Planetary gears are a system in which at least one “planet” gear rotates around a central “sun” gear. Planetary gears are often used in automatic transmissions. Depending on the design of the system, the power input can be from the sun gear, the planet gear, or the ring gear that surrounds the system. If the input comes from the sun gear, then the power output comes from the planet gears and the ring gear stays stationary. If the planets are fixed in place, then the input would still come from the sun, but the output would then come from the ring gear; in this case, the ring gear moves in the opposite direction of the sun gear. When the sun gear is fixed, the power input comes from the ring gear and the power output is the planet gears; this makes the output shaft decelerate in proportion to the output shaft.</p>
 <br>
-<h2>Chain and Sprockets</h2>
+<h2 id="chain" class="offset">Chain and Sprockets</h2>
 <p>Chain and sprocket transmissions have similar torque and speed properties to gears, but can be used in situations where the motor is located far from the wheel or mechanism. When working with chain and sprocket transmissions, the distance between two of the rollers is called pitch. Chains are rated with two-digit codes. The first digit denotes the pitch of the chain in eighths of an inch. The second digit can be a 0, 1, or 5; a zero denotes a chain as a “roller” chain, a one denotes a “lightweight” chain, and a five denotes a “brushed” chain. Two common chains are #25, with a breaking strength of 875lbs and a working strength of 140lbs, and #35, with a breaking strength of 2100lbs and a working strength of 480lbs. 
 <br>
 When using chain and sprocket transmissions, the chain must be wrapped a minimum of 120o around the sprocket. Further, an ideal reduction for a chain and sprocket reduction is 12T to 75T. A larger reduction will lead to losses in efficiency from the chain. A smaller reduction than 12:75 will result in vibrations of the system and excess wear. Finally, it is important to remember that any chain is only as strong as its master link. A master link is able to open in order to add or remove links from the total chain length; because of this it will only withstand up to 70% of the strength of the rest of the links. </p>
@@ -221,6 +221,18 @@ When using chain and sprocket transmissions, the chain must be wrapped a minimum
                     <li>
                         <a href="#gears">Gears</a>
                     </li>
+					<li>
+						<a href="#spur">Spur Gears</a>
+					</li>
+					<li>
+						<a href="#worm">Worm Gears</a>
+					</li>
+					<li>
+						<a href="#planet">Planetary Gears</a>
+					</li>
+					<li>
+						<a href="#chain">Chain and Sprockets</a>
+					</li>
                 </ul>
             </li>
         </ul>

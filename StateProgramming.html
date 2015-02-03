@@ -70,13 +70,13 @@
 <br/>
 <div class="container theme-showcase" role="main">
 <!-- CONTENT BEGIN -->
+<div class="row">
+<div class="col-md-8">
 <div class="jumbotron">
-	<div class="row">
-	<div class="col-md-8">
-		<h1>State Programming</h1>
+		<h1 id="title" class="offset">State Programming</h1>
 		<p>Using States and Concurrent Tasks</p>
 	</div>
-	</div>
+
 	<SCRIPT TYPE="text/javascript">
 <!--
 function popup(mylink, windowname)
@@ -92,7 +92,6 @@ return false;
 }
 //-->
 </SCRIPT>
-</div>
 <h3>Objectives</h3>
 <p>After this chapter you should be able to:</p>
 <UL>
@@ -102,40 +101,34 @@ return false;
 <LI>Understand How and Why to Use "break;"</LI>
 </UL>
 <br>
-<h2>Sequential Programming and Concurrent Tasks</h2>
-<div class="row">
-	<div class="col-md-7"><p>Sequential programming is used for very basic programs; it is when a program must complete each task before it can move on to starting the next one. This can take a long time depending on the number and complexity of the tasks. For example, a robot program needed to drive and raise an arm up (assume the center of gravity is low enough that the robot can drive with the arm extended and not tip over). The robot could drive all the way to its destination and then move the arm or it could simply do both together. This is the idea behind <span class="vocabColor"><b>state programming</b></span>. </p>
+<h2 id="sequential" class="offset">Sequential Programming and Concurrent Tasks</h2>
+<p>Sequential programming is used for very basic programs; it is when a program must complete each task before it can move on to starting the next one. This can take a long time depending on the number and complexity of the tasks. For example, a robot program needed to drive and raise an arm up (assume the center of gravity is low enough that the robot can drive with the arm extended and not tip over). The robot could drive all the way to its destination and then move the arm or it could simply do both together. This is the idea behind <span class="vocabColor"><b>state programming</b></span>. </p>
 
-	<p>Essentially, a program can run in a loop that is checking to see if both tasks are done and continue running as long as they both are not. One thing to keep in mind with this is that the program needs to remember where each task is at the end of every iteration so that it can begin again when the loop starts over. The step that each task is on in the program is called the <span class="vocabColor"><b>state</b></span>. A <span class="vocabColor"><b>state machine</b></span> is a program that keeps track of states and divides up work for each task to do.</p> </div>
-</div>
+<p>Essentially, a program can run in a loop that is checking to see if both tasks are done and continue running as long as they both are not. One thing to keep in mind with this is that the program needs to remember where each task is at the end of every iteration so that it can begin again when the loop starts over. The step that each task is on in the program is called the <span class="vocabColor"><b>state</b></span>. A <span class="vocabColor"><b>state machine</b></span> is a program that keeps track of states and divides up work for each task to do.</p> 
+
 <br>
-<h2>How to Use State Machines</h2>
-<div class="row">
-	<div class="col-md-7"><p>States are really just numerical constants, but for program clarity and readability each state should be given a name. Because states are constants they should be defined at the very top of a program using <span class="codeText">#define</span>. It is important to remember that once those values are defined, they cannot be changed throughout the program. Defined constants are not given a place in memory; the program simply looks at the top of the code to find the associated value and plugs it in. After all the states are defined, it is important to set the initial state in <span class="codeText">setup()</span>. Without an initial defined value for state, the program will likely assign a random value to it and the program will likely never enter any of the states.</p> </div>
-</div>
+<h2 id="how" class="offset">How to Use State Machines</h2>
+<p>States are really just numerical constants, but for program clarity and readability each state should be given a name. Because states are constants they should be defined at the very top of a program using <span class="codeText">#define</span>. It is important to remember that once those values are defined, they cannot be changed throughout the program. Defined constants are not given a place in memory; the program simply looks at the top of the code to find the associated value and plugs it in. After all the states are defined, it is important to set the initial state in <span class="codeText">setup()</span>. Without an initial defined value for state, the program will likely assign a random value to it and the program will likely never enter any of the states.</p> 
+
 <br>
-<h3>If-Statements Versus Switch-Statements</h3>
-<div class="row">
-	<div class="col-md-7"><p>One way to use state machines is with cascading if-statements. Cascading if-statements have multiple conditions that are checked. If the first condition is not met, then the program moves on to the next “else if” statement and so on until there are no other statements to check. Each time an if-statement is entered, some part of the program will execute and the state will be incremented to the next value. This style of programming is messy and really only allows the program to move straight down through the states. Further, state machines executed using if-statements are difficult to read through and will take a long time to execute because each condition must be checked individually.</p>
+<h3 id="versus" class="offset">If-Statements Versus Switch-Statements</h3>
+p>One way to use state machines is with cascading if-statements. Cascading if-statements have multiple conditions that are checked. If the first condition is not met, then the program moves on to the next “else if” statement and so on until there are no other statements to check. Each time an if-statement is entered, some part of the program will execute and the state will be incremented to the next value. This style of programming is messy and really only allows the program to move straight down through the states. Further, state machines executed using if-statements are difficult to read through and will take a long time to execute because each condition must be checked individually.</p>
 	
-	<p>Switch statements are the faster, cleaner, easier alternative to if-statements. The syntax can be seen in the picture below. Switch statements follow a certain flow when they are executed. First, the case is stated; this is what the program looks at and checks in a way similar to the if-statements in the above method. Next are the program statements that should run if a specific case is met. The last program statement should usually change the state. Finally, a “break;” statement should be implemented to tell the program to stop running in that specific state. </p>
-	
-	<p>Break is an important function for switch statements. The idea behind a switch statement is that it should be able to move through the cases in a non-linear fashion. This means that the program may run case 2, then case 1, then case 3 then case 0 if that is how it is set up. Without a break function, the program will see that there are no more program statements in the case and will usually simply fall into the next case. What the break function does is it entirely stops the iteration of the loop that the state machine is running in and then allows it to start over from the top, checking each case again.  It is also important to remember that while the state may be changed in a case, the program will not start looking for the next correct case until it sees a break function.</p></div>
-</div>
+<p>Switch statements are the faster, cleaner, easier alternative to if-statements. The syntax can be seen in the picture below. Switch statements follow a certain flow when they are executed. First, the case is stated; this is what the program looks at and checks in a way similar to the if-statements in the above method. Next are the program statements that should run if a specific case is met. The last program statement should usually change the state. Finally, a “break;” statement should be implemented to tell the program to stop running in that specific state. </p>
+
+<p>Break is an important function for switch statements. The idea behind a switch statement is that it should be able to move through the cases in a non-linear fashion. This means that the program may run case 2, then case 1, then case 3 then case 0 if that is how it is set up. Without a break function, the program will see that there are no more program statements in the case and will usually simply fall into the next case. What the break function does is it entirely stops the iteration of the loop that the state machine is running in and then allows it to start over from the top, checking each case again.  It is also important to remember that while the state may be changed in a case, the program will not start looking for the next correct case until it sees a break function.</p>
 <br>
-<h4>Some Important Things to Remember:</h4>
-<div class="row">
-	<div class="col-md-7">
+<h4 id="things" class="offset">Some Important Things to Remember:</h4>
+
 	<UL>
 	<LI>When setting up a switch statement, the “switch” itself must be followed by an integer value; a variable defined as either an int or a char will be acceptable. </LI>
 	<br>
 	<LI>No brackets are needed after the “case:” statement. The program will simply run through all the program statements until it finds a “break;” statement or until the next case comes up.</LI>
 	<br>
 	<LI>If the program finds that none of the other cases are correct and a default state is given, the program will go to that. Default states should usually contain simply instructions like “drive forward” so as not to cause conflicts with the rest of the states. Default states are not required.</LI>
-	</UL></div>
-</div>
+	</UL>
 <br>
-<h4>Proper State Machine Syntax</h4>
+<h4 id="syntax" class="offset">Proper State Machine Syntax</h4>
 <span class="codeText">
 #define FIRST&nbsp;&nbsp;&nbsp;&nbsp;0 <br>
 #define SECOND&nbsp;&nbsp;&nbsp;1 <br>
@@ -176,12 +169,40 @@ state = state1; <br>
 </span>
 
 
-<h3>Section Vocab</h3>
-<div class="row">
-	<div class="col-md-7">
+<h3 id="vocab" class="offset">Section Vocab</h3>
+
 	<p>State Programming: Program that has the ability to keep track of multiple states concurrently and execute parts of each task before the "previous" task has finished</p>
 	<p>State: Step of each task that the program is on</p>
-	<p>State Machine: Keeps track of states and tasks</p></div>
+	<p>State Machine: Keeps track of states and tasks</p>
+</div>
+
+<div class="col-md-3">
+	<div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
+        <ul class="nav bs-docs-sidenav">
+            <li class>
+                <a href="#title">Top</a>
+            </li>
+			<li>
+				<a href="#sequential">Sequential Programming and Concurrent Tasks</a>
+			</li>
+			<li>
+				<a href="#how">How to Use State Machines</a>
+			</li>
+			<li>
+				<a href="#versus">If-Statements Versus State Machines</a>
+			</li>  
+			<li>
+				<a href="#things">Important Things to Remember</a>
+			</li> 
+			<li>
+				<a href="#syntax">Syntax for State Machines</a>
+			</li>   
+			<li>
+				<a href="#vocab">Section Vocab</a>
+			</li>            
+        </ul>
+    </div>
+</div>
 </div>
 
 <!-- CONTENT END -->

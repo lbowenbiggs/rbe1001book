@@ -75,10 +75,12 @@ function updateParagraph(radio, target, paragraph){
 <br/>
 <div class="container theme-showcase" role="main">
 <!-- CONTENT BEGIN -->
+<div class="row">
+<div class="col-md-9">
 <div class="jumbotron">
 	<div class="row">
 	<div class="col-md-8">
-		<h1>Sensors</h1>
+		<h1 id="title" class="offset">Sensors</h1>
 		<p>Sensing and Interrupt Service Routines</p>
 	</div>
 	</div>
@@ -106,13 +108,11 @@ return false;
 <LI>Describe Interrupt Service Routines and when they are appropriate</LI>
 </UL>
 
-<h2>What are Sensors?</h2>
-<div class="row">
-	<div class="col-md-7"><p>Sensors are electronic components used to help a system interact with or understand the environment that it is operating in. Sensors come in many different types, each with a different goal. Some sensors can tell a robot when it has come in contact with something; others tell how far away a target or object is. Certain sensors tell the state of different components in the system. Most sensors are managed by program logic and basic I/O. </p></div>
-</div>
+<h2 id="what" class="offset">What are Sensors?</h2>
+<p>Sensors are electronic components used to help a system interact with or understand the environment that it is operating in. Sensors come in many different types, each with a different goal. Some sensors can tell a robot when it has come in contact with something; others tell how far away a target or object is. Certain sensors tell the state of different components in the system. Most sensors are managed by program logic and basic I/O. </p>
 <br>
-<h2>Types of Sensors</h2>
-<h3>Mechanical</h3>
+<h2 id="types" class="offset">Types of Sensors</h2>
+<h3 id="mechanical" class="offset">Mechanical</h3>
 <div class="row">
 	<div class="col-md-7"><p>Mechanical sensors are used to tell when a robot, or subsystem on a robot, is in contact with something. The most common types of mechanical sensors are bump sensors and limit switches. Mechanical sensors can tell whether the system is at a singular, set distance. Mechanical sensors send a digital signal (1 or 0) to the input pins on a controller to indicate whether the sensor is depressed or not. </p> </div>
 	<div class="col-md-4"><center><img src="Sensors_Pictures/LimitSwitch.png" HEIGHT="150px" /img></center>
@@ -120,7 +120,7 @@ return false;
 </div>
 
 <br>
-<h3>Light</h3>
+<h3 id="light" class="offset">Light</h3>
 <div class="row">
 	<div class="col-md-7"><p>Light sensors, specifically IR sensors, are used to determine the distance, angle or timing of something. Infrared Sensors have an IR diode that produces light at the focal point of a lens; this produces parallel beams of light moving out of the lens into the surrounding environment. The sensor outputs a voltage that is related to the distance perceived by the sensor. The resultant curve is non-linear and as the object gets closer, the output voltage gets larger. In order to cover a larger area, consider using multiple IR sensors that are angled such that the fields of IR emitted cross each other. Alternatively, consider using a servo to create a sweeping motion and scan the entire area periodically. </p></div>
 	<div class="col-md-4"><center><img src="Sensors_Pictures/LineTracker.png" HEIGHT="200px" /img></center>
@@ -128,26 +128,22 @@ return false;
 </div>
 
 <br>
-<h3>SONAR</h3>
-<div class="row">
-	<div class="col-md-7"><p>SONAR sensors use sound waves in a way that mimics echolocation. SONAR sensors use a speaker and microphone to project sound into an environment and listen for it to return. SONAR sensors measure the time difference between the emission of the sound and when it comes back to determine distance. SONAR sensors can be used in both air and water. </p></div>
-</div>
+<h3 id="sound" class="offset">SONAR</h3>
+<p>SONAR sensors use sound waves in a way that mimics echolocation. SONAR sensors use a speaker and microphone to project sound into an environment and listen for it to return. SONAR sensors measure the time difference between the emission of the sound and when it comes back to determine distance. SONAR sensors can be used in both air and water. </p>
 <br>
-<h3>Potentiometer</h3>
+<h3 id="pot" class="offset">Potentiometer</h3>
 <div class="row">
 	<div class="col-md-7"><p>Potentiometers are variable resistors that can be used as a sensor. The main type of potentiometer is controlled by a dial that increases or decreases resistance as it is turned. Another common type of potentiometer is controlled by a linear sliding wiper. The term “wiper” refers to the part of the potentiometer that is actually limiting the resistance. While potentiometers are not always used as sensors, they can be useful for determining forces acting on an object or the distance from an object. As the object pushes on the potentiometer and moves the wiper, the output resistance of changes and therefore the voltage affected by that resistance changes. By knowing the range of the potentiometer and the total change in voltage (which would come from calibrating the system), you can tell the amount of force on an object and even how far away the object is.</p></div>
-	<div class="col-md-2"><center><img src="Sensors_Pictures/Potentiometer.png" HEIGHT="150px" /img></center>
+	<div class="col-md-2"><center><img src="Sensors_Pictures/Potentiometer.png" HEIGHT="125px" /img></center>
 	<br><center><span class="captionStyle">Vex Potentiometer</span></center></div>
-	<div class="col-md-2"><center><img src="Sensors_Pictures/GreenPotentiometer.png" HEIGHT="150px" /img></center>
+	<div class="col-md-2"><center><img src="Sensors_Pictures/GreenPotentiometer.png" HEIGHT="125px" /img></center>
 	<br><center><span class="captionStyle">Standard Potentiometer</span></center></div>
 </div>
 
-<h3>Gyro</h3>
-<div class="row">
-	<div class="col-md-7"><p>Gyros measure the rate of rotation in a particular axis. Gyros have three main sensing applications. First, they can be used to sense the angular velocity of a component. Second, they can sense the angle that a certain component, subsystem, or entire system is at. Third, they can be used in control systems to sense the orientation or balance of an object and outputting signal to tell the system to correct those things. </p></div>
-</div>
+<h3 id="gyro" class="offset">Gyro</h3>
+<p>Gyros measure the rate of rotation in a particular axis. Gyros have three main sensing applications. First, they can be used to sense the angular velocity of a component. Second, they can sense the angle that a certain component, subsystem, or entire system is at. Third, they can be used in control systems to sense the orientation or balance of an object and outputting signal to tell the system to correct those things. </p>
 <br>
-<h3>Encoder</h3>
+<h3 id="encoder" class="offset">Encoder</h3>
 <div class="row">
 	<div class="col-md-7"><p>An encoder can be used to determine position, velocity, or acceleration of a system from a given starting point. Angular or shaft encoders take the angular position of a shaft and convert it to either an analog or a digital code. There are two types of encoders: absolute and incremental. Incremental encoders give the program information about the relative changes in the shaft which can then be worked with to determine other information. Absolute encoders indicate the current position of the shaft and can maintain that position information even when power is removed. Vex encoders are incremental; you can track changes in the angle of the shaft as it moves to determine position. Further, you can compare the changes in position relative to time to find velocity and so on. </p></div>
 	<div class="col-md-4"><center><img src="Sensors_Pictures/Encoder.png" HEIGHT="200px" /img></center>
@@ -155,12 +151,10 @@ return false;
 </div>
 
 <br>
-<h2>Interrupt Service Routines</h2>
-<div class="row">
-	<div class="col-md-7"><p>Interrupt Service Routines (ISRs) are used to help organize program flow and ensure that input from certain sensors are not overlooked. ISRs will stop all normal program flow when triggered and the program will run the routine or function before going back to what it was doing before. The alternative is to “poll” for results, which really means just continuously checking to see if the sensor has new data. </p>
-	<p>For example, imagine you are sitting at home watching television and waiting for a phone call. A programmer trying to handle this would see that there are two solutions: polling and interrupts. The polling solution would be to watch TV, then check the phone to see if anyone is there, then watch TV again, then pick up the phone again and so on. The interrupt solution would be to watch TV while listening for the phone to ring; if it does, simply stop the show and answer the phone then resume the show after hanging up. </p>
-	<p>Interrupts can get tricky or messy if there are multiple things you are waiting for in a program. Imagine that same example, but on top of watching TV and waiting for the phone you also have to attend to someone at the door, food cooking in the kitchen and checking your social media accounts on your computer. What if the doorbell rings at the same time as the timer in the kitchen beeps, the phone rings, and your best friend messages you on your laptop? Which one would you handle first? To help combat this, interrupts can be assigned a level of importance. That way if multiple are triggered at the same time, the one with the lowest importance (most important) would go first, followed by the next lowest and so on until there are no more interrupts left to handle. The program would then return back to whatever it was doing before all of the interrupts were triggered.</p></div>
-</div>
+<h2 id="isr" class="offset">Interrupt Service Routines</h2>
+<p>Interrupt Service Routines (ISRs) are used to help organize program flow and ensure that input from certain sensors are not overlooked. ISRs will stop all normal program flow when triggered and the program will run the routine or function before going back to what it was doing before. The alternative is to “poll” for results, which really means just continuously checking to see if the sensor has new data. </p>
+<p>For example, imagine you are sitting at home watching television and waiting for a phone call. A programmer trying to handle this would see that there are two solutions: polling and interrupts. The polling solution would be to watch TV, then check the phone to see if anyone is there, then watch TV again, then pick up the phone again and so on. The interrupt solution would be to watch TV while listening for the phone to ring; if it does, simply stop the show and answer the phone then resume the show after hanging up. </p>
+<p>Interrupts can get tricky or messy if there are multiple things you are waiting for in a program. Imagine that same example, but on top of watching TV and waiting for the phone you also have to attend to someone at the door, food cooking in the kitchen and checking your social media accounts on your computer. What if the doorbell rings at the same time as the timer in the kitchen beeps, the phone rings, and your best friend messages you on your laptop? Which one would you handle first? To help combat this, interrupts can be assigned a level of importance. That way if multiple are triggered at the same time, the one with the lowest importance (most important) would go first, followed by the next lowest and so on until there are no more interrupts left to handle. The program would then return back to whatever it was doing before all of the interrupts were triggered.</p>
 	
 	
 <h2>Concept Questions</h2>
@@ -189,6 +183,46 @@ return false;
 	<div onclick="updateParagraph('#Square','#isr_result', 'Consider reviewing the Interrupt Service Routine section again');"><input type="radio" id="Square" value="Square" name="isr"/> Robot needs to drive straight for one foot, then turn left, then repeat three more times to make a square. </div>
 	<p id="isr_result" style="min-height:20px;"></p>
 </form>
+</div>
+
+<div class="col-md-3">
+	<div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
+        <ul class="nav bs-docs-sidenav">
+            <li class>
+                <a href="#title">Top</a>
+            </li>
+            <li>
+                <a href="#what">What Are Sensors?</a>
+            </li>
+            <li>
+                <a href="#types">Types of Sensors</a>  
+			</li>				
+			<li>
+				<a href="#mechanical">Mechanical</a>
+			</li>
+			<li>
+				<a href="#light">Light</a>
+			</li>
+			<li>
+				<a href="#sound">SONAR</a>
+			</li>
+			<li>
+				<a href="#pot">Potentiometer</a>
+			</li>  
+			<li>
+				<a href="#gyro">Gyro</a>
+			</li> 
+			<li>
+				<a href="#encoder">Encoder</a>
+			</li>   
+			<li>
+				<a href="#isr">Interrupt Service Routine</a>
+			</li>            
+        </ul>
+    </div>
+</div>
+</div>
+	
 <!-- CONTENT END -->
 </div>
 
