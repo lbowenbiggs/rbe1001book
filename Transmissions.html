@@ -45,6 +45,12 @@ else
 window.open(href, windowname, 'width=500,height=600,scrollbars=yes');
 return false;
 }
+
+function updateParagraph(radio, target, paragraph){
+        $(target).html(paragraph);
+        $(radio).prop("checked", true);
+    }
+
 //-->
 </SCRIPT>
 
@@ -90,8 +96,7 @@ return false;
 <div class="jumbotron">
     <div class="row">
         <h1 id="title" class="offset" class="page-header">Power Transmission</h1>
-        <p>This is a sample chapter of the Introduction to Robotics Engineering textbook, built for the 2014 RBE Book IQP.</p>
-        <p>For questions, email <a href="mailto:rbebook@wpi.edu">rbebook@wpi.edu</a></p>
+        <p>Introduction to gear and chain systems</p>
     </div>
 </div>
 
@@ -184,28 +189,37 @@ The entire system of gears used to manipulate motor speed, torque or direction i
 When using chain and sprocket transmissions, the chain must be wrapped a minimum of 120o around the sprocket. Further, an ideal reduction for a chain and sprocket reduction is 12T to 75T. A larger reduction will lead to losses in efficiency from the chain. A smaller reduction than 12:75 will result in vibrations of the system and excess wear. Finally, it is important to remember that any chain is only as strong as its master link. A master link is able to open in order to add or remove links from the total chain length; because of this it will only withstand up to 70% of the strength of the rest of the links. </p>
 <br><br>
 
-<h1>Concept Check Questions</h1>
-<p>Given a power transmission with a motor moving counter clockwise that connected to a 36-tooth gear, a 12-tooth gear, a 60-tooth gear, and finally a 36-tooth gear:</p>
-<img src="TransmissionPictures/ConceptQuestion.png" HEIGHT="100px" /img>
+<h1 id="questions" class="offset">Concept Check Questions</h1>
 <form>
+    <p>Given a power transmission with a motor moving counter clockwise that connected to a 36-tooth gear, a 12-tooth gear, a 60-tooth gear, and finally a 36-tooth gear:</p>
+    <img src="TransmissionPictures/ConceptQuestion.png" HEIGHT="100px" /img>
+    <br/>
 	<label for="ratio">What is the gear ratio of the system?</label>
-	<br/><input id="ratio" name="gear_ratio" pattern="1|1:1|1/1">
+	<br/>
+    <div onclick="updateParagraph('#1to1','#ratio_result', 'Correct!');"><input type="radio" id="1to1" value="1to1" name="ratio"/> 1:1  </div>
+    <div onclick="updateParagraph('#1to30','#ratio_result', 'Consider Reviewing the Gears section again');"><input type="radio" id="1to30" value="1to30" name="ratio"/> 1:30 </div>
+    <div onclick="updateParagraph('#30to1','#ratio_result', 'Consider reviewing the Gears section again');"><input type="radio" id="30to1" value="30to1" name="ratio"/> 30:1 </div>
+    <p id="ratio_result" style="min-height:20px;"></p>
 
 	<br/>
 	<label for="direction">What direction is the final driven gear moving?</label>
-	<br/><input type="radio" id="direction" value="clockwise"> Clockwise
-	<br/><input type="radio" id="direction" value="counterclockwise"> Counterclockwise
-</form>
-<br><br>
-<p>Given a power transmission with a motor connected to a 12-tooth gear and a 60-tooth gear:
-<form>
+	<div onclick="updateParagraph('#Clockwise','#directinon_result', 'Correct!');"><input type="radio" id="Clockwise" value="Clockwise" name="ratio"/> Clockwise  </div>
+    <div onclick="updateParagraph('#Counterclockwise','#directinon_result', 'Consider Reviewing the Gears section again');"><input type="radio" id="Counterclockwise" value="Counterclockwise" name="ratio"/> Counterclockwise </div>
+    <p id="directinon_result" style="min-height:20px;"></p>
+
+<br/><br/>
+<p>Given a power transmission with a motor connected to a 12-tooth gear and a 60-tooth gear:</p>
 	<label for="ratio2">What is the gear ratio of the system?</label>
-	<br/><input id="ratio" name="gear_ratio" pattern="1|1:1|1/1">
+	<br/>
+    <div onclick="updateParagraph('#1to5','#ratio2_result', 'Correct!');"><input type="radio" id="1to5" value="1to5" name="ratio"/> 1:5  </div>
+    <div onclick="updateParagraph('#5to1','#ratio2_result', 'Consider Reviewing the Gears section again');"><input type="radio" id="5to1" value="5to1" name="ratio"/> 5:1 </div>
+    <p id="ratio2_result" style="min-height:20px;"></p>
 
 	<br/>
-	<label for="direction">Is the system High Speed/Low Torque or Low Speed/High Torque?</label>
-	<br/><input type="radio" id="direction" value="High Speed"> High Speed/Low Torque
-	<br/><input type="radio" id="direction" value="Low Speed"> Low Speed/High Torque
+	<label for="torque">Is the system High Speed/Low Torque or Low Speed/High Torque?</label>
+	<div onclick="updateParagraph('#HSLT','#torque_result', 'Consider Reviewing the Gears section again');"><input type="radio" id="HSLT" value="HSLT" name="torque"> High Speed/Low Torque </div>
+	<div onclick="updateParagraph('#LSHT','#torque_result', 'Correct!');"><input type="radio" id="LSHT" value="LSHT" name="torque"> High Speed/Low Torque </div>
+    <p id="torque_result" style="min-height:20px;"></p>
 </form>
 </div>
 
@@ -236,6 +250,9 @@ When using chain and sprocket transmissions, the chain must be wrapped a minimum
 					<li>
 						<a href="#chain">Chain and Sprockets</a>
 					</li>
+                    <li>
+                        <a href="#questions">Concept Check Questions</a>
+                    </li>
                 </ul>
             </li>
         </ul>
